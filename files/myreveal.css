@@ -1,0 +1,85 @@
+/*@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url(reveal.js-3.3.0.1/css/theme/fonts/Quicksand.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: url(reveal.js-3.3.0.1/css/theme/fonts/QuicksandBold.ttf) format('truetype');
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*/
+
+/*.reveal {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: #000; }*/
+
+.reveal .slides {
+  text-align: left;
+}
+
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: none;
+   }
+
+
+.reveal h2 {
+  font-size: 1.4em;
+  /*font-weight: bold;*/ }
+
+p.question {
+ font-size: 100%;
+ /*font-weight: bold;*/
+ /*font-style: italic;*/
+ line-height: 120%;
+ padding-top: 0.2em;
+ padding-bottom: 0.2em;
+ padding-left: 0.6em;
+ padding-right: 0.2em;
+ border-style: none none none solid;
+ border-left-width: 1em;
+ border-top-width: thin;
+ border-right-width: thin;
+ border-bottom-width: thin;
+ border-color: #51247A;
+ color: #51247A;
+ /*background-color: white;*/
+}
+
+#small {
+  font-size: 70%
+}
+
+p.questionalt {
+ font-size: 100%;
+ /*font-weight: bold;*/
+ /*font-style: italic;*/
+ line-height: 120%;
+ padding-top: 0.2em;
+ padding-bottom: 0.2em;
+ padding-left: 0.6em;
+ padding-right: 0.2em;
+ border-style: none none none solid;
+ border-left-width: 1em;
+ border-top-width: thin;
+ border-right-width: thin;
+ border-bottom-width: thin;
+ border-color: #FBB800;
+ color: #FBB800;
+ /*background-color: white;*/
+}
