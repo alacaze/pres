@@ -23,6 +23,10 @@
   font-weight: normal;
   color: #000; }*/
 
+.slide-background:first-child {
+  background-color: #51247A;
+}
+
 .reveal .slides {
   text-align: left;
 }
@@ -63,6 +67,11 @@ p.question {
 
 #small {
   font-size: 70%
+}
+
+#center {
+  text-align: center;
+  vertical-align: middle;
 }
 
 p.questionalt {
