@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Adam La Caze" />
+  <meta name="dcterms.date" content="2019-11-28" />
+  <title>Masters of Clinical Pharmacy 2020</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="files/myreveal.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Masters of Clinical Pharmacy 2020</h1>
+    <h2 class="author">Adam La Caze</h2>
+    <h3 class="date">28 November 2019</h3>
+</section>
+
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
+<ul>
+<li><p>We have a <a href="https://my.uq.edu.au/programs-courses/program.html?acad_prog=5718&amp;year=2020">new MClinPharm program</a> available from 2020</p></li>
+<li><p>The <em>new</em> MClinPharm is the same size as the “old” GradDipClinPharm</p></li>
+<li><p>No new enrolments to the GradDipClinPharm or old MClinPharm (but current students can complete within their expected time frame)</p></li>
+</ul>
+</section>
+<section id="drivers" class="slide level2">
+<h2>Drivers</h2>
+<ol type="1">
+<li><p>Changes in how Level 9 Masters Degrees were defined within the Australian Qualifications Framework, and</p></li>
+<li><p>Recognition that the year-long research project within the MClinPharm program did not meet the needs of all students.</p></li>
+</ol>
+</section>
+<section id="summary" class="slide level2" data-background="#FBB800">
+<h2>Summary</h2>
+<table>
+<thead>
+<tr class="header">
+<th>New MClinPharm</th>
+<th>Old MClinPharm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>16 units</td>
+<td>24 units</td>
+</tr>
+<tr class="even">
+<td>8 x 2 unit semester courses</td>
+<td>Mix of semester and year-long courses</td>
+</tr>
+<tr class="odd">
+<td>1 year full-time equivalent</td>
+<td>18 month full-time equivalent</td>
+</tr>
+<tr class="even">
+<td>3 x 2 unit therapeutics courses</td>
+<td>2 x 4 unit therapeutics courses</td>
+</tr>
+<tr class="odd">
+<td>1 x 2 unit evaluation project</td>
+<td>1 x 6 unit research project</td>
+</tr>
+<tr class="even">
+<td>No placement/biostatistics elective</td>
+<td>Placement/Biostatistics elective</td>
+</tr>
+</tbody>
+</table>
+<!-- ## MClinPharm Course List
+
+
+|          |                      Semester 1                      |          |                Semester 2               |
+|----------|------------------------------------------------------|----------|-----------------------------------------|
+| PHRM7010 | Advanced Skills for Clinical Pharmacy Practice       | PHRM7032 | Pharmacotherapy in Patient Care B       |
+| PHRM7031 | Pharmacotherapy in Patient Care A                    | PHRM7033 | Pharmacotherapy in Patient Care C       |
+| PHRM7021 | Evaluation and Research in Pharmacy Practice         | PHRM7040 | Pharmacists in the Modern Health System |
+| PHRM7051 | Leading and Managing the Future in Pharmacy Practice | PHRM7095 | Advanced Practice Project               |
+ -->
+</section>
+<section id="mclinpharm-course-list" class="slide level2">
+<h2>MClinPharm Course List</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Course Code</th>
+<th>Course Title</th>
+<th>Semester</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PHRM7010</td>
+<td>Advanced Skills for Clinical Pharmacy Practice</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>PHRM7021</td>
+<td>Evaluation and Research in Pharmacy Practice</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>PHRM7031</td>
+<td>Pharmacotherapy in Patient Care A</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>PHRM7032</td>
+<td>Pharmacotherapy in Patient Care B</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>PHRM7033</td>
+<td>Pharmacotherapy in Patient Care C</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>PHRM7040</td>
+<td>Pharmacists in the Modern Health System</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>PHRM7051</td>
+<td>Leading and Managing the Future in Pharmacy Practice</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>PHRM7095</td>
+<td>Advanced Practice Project</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="course-timing" class="slide level2">
+<h2>Course timing</h2>
+<table style="width:47%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Semester 1</strong></th>
+<th style="text-align: left;"><strong>Semester 2</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">PHRM7010*</td>
+<td style="text-align: left;">PHRM7040</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PHRM7031</td>
+<td style="text-align: left;">PHRM7032</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PHRM7021*</td>
+<td style="text-align: left;">PHRM7033</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PHRM7051</td>
+<td style="text-align: left;">PHRM7095</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="therapeutics" class="slide level2" data-background="#4085C6">
+<h2>Therapeutics</h2>
+<ul>
+<li>PHRM7031 (S1), PHRM7032 (S2), PHRM7033 (S2)</li>
+<li>PHRM7031 and PHRM7032 are prerequisites for PHRM7033</li>
+</ul>
+<p><strong>Credit arrangements</strong></p>
+<ul>
+<li>Completion of PHRM7030 provides credit for PHRM7031 and PHRM7033</li>
+<li>Completion of PHRM7060 provides credit for PHRM7032 and PHRM7033</li>
+</ul>
+</section>
+<section id="advanced-practice-project-phrm7095-2-units-semester-2" class="slide level2" data-background="#4085C6">
+<h2>Advanced Practice Project (PHRM7095, 2 units, Semester 2)</h2>
+<ul>
+<li><p>Replaces PHRM7071/2 (6 unit, year-long subject) and the elective placements or biostatistics subject</p></li>
+<li><p>The project can be a quality improvement project, management project or a small research project</p></li>
+<li><p>Implementation of PHRM7021 proposal or PHRM7051 business case proposal (or something new)</p></li>
+<li><p>Getting the scale right will be important</p></li>
+</ul>
+</section>
+<section id="additional-changes" class="slide level2" data-background="#4085C6">
+<h2>Additional changes</h2>
+<ul>
+<li><p>Better align activities and recognition of the work that pharmacists do as part of the SHPA Foundation Residency Program</p></li>
+<li><p>The aim is to have the flexibility to meet the needs to pharmacists who have completed, or are completing, a residency program <strong>and those who are not</strong></p></li>
+<li><p>To incorporate activities throughout the program related to the development of an Advanced Pharmacy Practice portfolio</p></li>
+</ul>
+</section>
+<section id="what-does-this-mean-for-you" class="slide level2" data-background="#51247A">
+<h2>What does this mean for you?</h2>
+<ul>
+<li><p><strong>If you are in the GCClinPharm or GDipClinPharm</strong>, you can articulate to the new MClinPharm</p></li>
+<li><p>If you have completed a course that is in the MClinPharm within the last couple of years you will receive credit for that course</p></li>
+<li><p>Credit arrangements for the therapeutics courses apply (as above)</p></li>
+<li><p>There are rules about how long you can claim credit for a course as part of a Masters program (<a href="https://ppl.app.uq.edu.au/content/3.50.03-credit-previous-studies-and-recognised-prior-learning">UQ PPL 3.50.03b, 5.5.8.2</a>)</p></li>
+</ul>
+</section>
+<section id="what-do-i-need-to-do" class="slide level2" data-background="#51247A">
+<h2>What do I need to do?</h2>
+<ul>
+<li><p><strong>If you wish to stay in your current program and complete it within the expected timeframe,</strong> there is no further action</p></li>
+<li><p>If you wish to <a href="https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs">change from your current program</a> to the new #16 Master of Clinical Pharmacy program, you must submit a program change via mySI-net.</p></li>
+</ul>
+<p><strong><em>Please note: Program changes for Semester 1, 2020 open in SI-net on 2 January 2020.</em></strong> <strong><em>Once open you will be able to submit to change your program in SI-net.</em></strong></p>
+</section>
+<section id="further-information" class="slide level2" data-background="#51247A">
+<h2>Further information</h2>
+<ul>
+<li><p><a href="https://my.uq.edu.au/programs-courses/program.html?acad_prog=5718&amp;year=2020">Program information</a> for the new MClinPharm</p></li>
+<li><p><a href="https://my.uq.edu.au/programs-courses/program.html?acad_prog=5015&amp;year=2020">Program information</a> for the modified Graduate Certificate in Clinical Pharmacy</p></li>
+<li><p>Information regarding the program in 2019 and earlier remains available.</p></li>
+<li><p>For advice about the program and program change, please contact Kaylene Hanlon (<a href="mailto:k.hanlon@uq.edu.au">k.hanlon@uq.edu.au</a>).</p></li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

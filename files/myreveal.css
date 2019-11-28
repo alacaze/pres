@@ -23,6 +23,9 @@
   font-weight: normal;
   color: #000; }*/
 
+section.has-dark-background a {
+  color: orange; }
+
 .slide-background:first-child {
   background-color: #51247A;
 }
@@ -91,4 +94,16 @@ p.questionalt {
  border-color: #FBB800;
  color: #FBB800;
  /*background-color: white;*/
+}
+
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); 
 }
