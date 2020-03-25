@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Regulation of drugs &amp; professional practice</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="files/myreveal2.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="files/header-attrs-2.1/header-attrs.js"></script>
+    <script src="files/kePrint-0.0.1/kePrint.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Regulation of drugs &amp; professional practice</h1>
+    <h2 class="author"><p>Adam La Caze<br />
+School of Pharmacy<br />
+The University of Queensland</p></h2>
+    <h3 class="date">March 2020</h3>
+</section>
+
+<section id="learning-objectives" class="slide level2">
+<h2>Learning Objectives</h2>
+<ul>
+<li>Be aware of key federal and state laws regarding medicines</li>
+<li>Be able to describe what is meant by a drug schedule</li>
+<li>Be able to identify key responsibilities of medical practitioners in relation to drugs and poisons</li>
+<li>Be able to critically reflect on your practice and the practice of others in relation to drugs and poisons</li>
+</ul>
+</section>
+<section id="key-concepts" class="slide level2">
+<h2>Key Concepts</h2>
+<div style="font-size: 80%">
+<ul>
+<li class="fragment">Medicines are tightly regulated. Two important legislative instruments are the <em>Standard for Uniform Scheduling for Medicines and Poisons</em> (SUSMP) and <em>Health (Drugs and Poisons) Regulation 1996</em> (HDPR)
+<ul>
+<li class="fragment">Drugs are regulated according to <strong>schedules</strong>. The SUSMP provides the schedules for drugs in Australia.</li>
+<li class="fragment">HDPR stipulates the who, how, when and where of prescribing, dispensing and administration of drugs in Queensland</li>
+</ul></li>
+<li class="fragment">Professional decisions rely on considerations of the law, ethics and the clinical context—it is rare that a professional decision can be made relying exclusively on any one of these</li>
+</ul>
+</div>
+<aside class="notes">
+<p><strong>Resources</strong></p>
+<ul>
+<li><a href="https://www.medicalboard.gov.au/Codes-Guidelines-Policies/Code-of-conduct.aspx">Good medical practice: a code of conduct for doctors in Australia</a></li>
+<li><a href="https://ama.com.au/media/new-code-ethics-doctors">AMA Code of Ethics</a></li>
+<li>The <a href="https://alacaze.github.io/pres/RegulationDrugs.html">slides</a> presented in the lecture</li>
+</ul>
+</aside>
+</section>
+<section>
+<section id="professional-decision-making" class="title-slide slide level1">
+<h1>Professional decision-making</h1>
+
+</section>
+<section id="professional-decisions" class="slide level2">
+<h2>Professional decisions</h2>
+<ul>
+<li class="fragment">Professional decisions regarding screening, diagnosis and treatment take into consideration a wide array of factors
+<ul>
+<li class="fragment">What is the evidence?</li>
+<li class="fragment">What does the patient want?</li>
+<li class="fragment">What is available to you?</li>
+<li class="fragment">What are you legally permitted to do?</li>
+<li class="fragment">What are you competent to do?</li>
+</ul></li>
+<li class="fragment">These decisions have important consequences and <em>always</em> have an ethical component</li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p><img data-src="files/ProfessionalDecisionMaking_Med.png" alt="Appropriate individual professional decisions are informed by clinical guidelines, professional standards, legal requirements and code(s) of ethics" /></p>
+</section>
+<section id="a-case" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6">A case</h2>
+<p class="fragment">
+Samara is 35 and looks after 3 children. She suffers regular migraines, depression and anxiety. Samara presents to clinic asking for a script for her anxiety and pain tablets.
+</p>
+<p class="fragment">
+She is currently taking nitrazepam, diazepam, tramadol, amitriptyline and some antibiotics for a recent upper respiratory infection.
+</p>
+<p class="fragment">
+Looking at your records she has been coming more regularly than you would expect for her pain and anxiety tablets. One of your colleagues recently noted a concern that she was “relying on these medicines too much”.
+</p>
+</section>
+<section id="some-additional-questions" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6">Some additional questions</h2>
+<ul>
+<li>Can you/should you self-prescribe tramadol?</li>
+<li>Can you/should you self-prescribe ketamine?</li>
+<li>Can you/should you prescribe hydroxychloroquine to a family member?</li>
+</ul>
+</section></section>
+<section>
+<section id="medicines-regulation" class="title-slide slide level1">
+<h1>Medicines regulation</h1>
+
+</section>
+<section id="medical-practice-and-regulation" class="slide level2">
+<h2>Medical practice and regulation</h2>
+<p>Being a health professional well means practicing in accordance with the law.</p>
+<p>Practising outside of the law puts the <em>public</em> at risk.</p>
+<p>If that is not a good enough reason; practising outside the law puts <em>you</em> at risk.</p>
+<p class="question fragment">
+Risk of civil litigation
+</p>
+<p class="question fragment">
+Risk of professional <a href="http://en.wikipedia.org/wiki/Censure">censure</a>: unprofessional conduct/professional misconduct (perhaps leading to removal of registration).
+</p>
+<p class="question fragment">
+Risk of prosecution in the courts for breaches of the HDPR
+</p>
+</section>
+<section id="law-and-medicines" class="slide level2">
+<h2>Law and medicines</h2>
+<p>A lot of legislation is relevant to medical practice. We are focusing on those related to medicines.</p>
+<ul>
+<li><a href="https://www.legislation.qld.gov.au/view/html/asmade/act-2019-026"><em>Medicines and Poisons Act 2019</em></a></li>
+<li><em>Standard for Uniform Scheduling for Medicines and Poisons</em> (referred to as: <a href="http://www.tga.gov.au/industry/scheduling-poisons-standard.htm">SUSMP</a>)</li>
+<li><em>Health (Drugs and Poisons) Regulation 1996</em> (referred to as: <a href="https://www.legislation.qld.gov.au/LEGISLTN/CURRENT/H/HealDrAPoR96.pdf">HDPR</a>).</li>
+</ul>
+<p class="question fragment">
+The nice thing about legislation is that it is written down.
+</p>
+</section>
+<section id="new-regulations-are-coming" class="slide level2">
+<h2>New regulations are coming!</h2>
+<p>The <em>Medicines and Poisons Act 2019</em> replaces the <em>Health Act 1937</em> and provides a framework for replacing the <em>Health (Drugs and Poisons) Regulation 1996</em>.</p>
+<p class="question">
+The new regulations will be the <em>Medicines and Poisons Regulation (Medicines Regulation)</em>. As at March 2020, this regulation is yet to be in force and the time frame for its implementation is unclear.
+</p>
+<p>While there will be changes, there will still be much that is similar to the HDPR.</p>
+<aside class="notes">
+<p>See <a href="https://www.legislation.qld.gov.au/view/pdf/bill.first.exp/bill-2018-004">here</a> for discussion of the new regulation.</p>
+</aside>
+</section>
+<section id="medicines-regulation-overview" class="slide level2">
+<h2>Medicines regulation: overview</h2>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Instrument
+</th>
+<th style="text-align:left;">
+Acronym
+</th>
+<th style="text-align:left;">
+Function
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+Standard for Uniform Scheduling for Medicines and Poison
+</td>
+<td style="text-align:left;width: 5em; ">
+SUSMP
+</td>
+<td style="text-align:left;width: 15em; ">
+Provides scheduling for all medicines available in Australia
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+Health (Drugs and Poisons) Regulation 1996
+</td>
+<td style="text-align:left;width: 5em; ">
+HDPR
+</td>
+<td style="text-align:left;width: 15em; ">
+Provides regulations for prescribing, dispensing and supply of medicines in Queensland
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+Pharmaceutical Benefits Scheme
+</td>
+<td style="text-align:left;width: 5em; ">
+PBS
+</td>
+<td style="text-align:left;width: 15em; ">
+The federal scheme that subsidizes medication costs
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scheduling-susmp" class="slide level2">
+<h2>Scheduling (SUSMP)</h2>
+<ul>
+<li>Medicine scheduling is provided by the <em>Standard for the Uniform Scheduling of Medicines and Poisons</em> (SUSMP)</li>
+<li>Roughly speaking, the more dangerous the drug—due to toxicity or potential for abuse—the more restricted the scheduling.</li>
+<li>The regulations provided in the HDPR depend on the schedule of the medicine</li>
+</ul>
+</section>
+<section id="key-schedules" class="slide level2">
+<h2>Key Schedules</h2>
+<table>
+<caption>Different terminology used for drug schedules. The SUSMP has schedule 1–9. S2–4 and S8 are the schedules that you most frequently come across in pharmacy.</caption>
+<thead>
+<tr class="header">
+<th>SUSMP</th>
+<th>HDPR</th>
+<th>Alternatives</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>S2,S3</td>
+<td>Poisons</td>
+<td>Over-the-counter drugs</td>
+<td>Paracetamol</td>
+</tr>
+<tr class="even">
+<td>S4</td>
+<td>Restricted drug</td>
+<td>Prescription drug</td>
+<td>Antibiotics</td>
+</tr>
+<tr class="odd">
+<td>S8</td>
+<td>Controlled drug</td>
+<td>Dangerous drug</td>
+<td>Opioids</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prescribing-dispensing-administering-medicines-hdpr" class="slide level2">
+<h2>Prescribing, dispensing &amp; administering medicines (HDPR)</h2>
+<ul>
+<li>The HDPR is organised by drug schedule: many regulations are specific to the schedule of the drug</li>
+<li>Regulations are provided for <em>controlled drugs</em> (S8), <em>restricted drugs</em> (S4) and <em>poisons</em> (S2,S3)</li>
+<li>Additional regulations are placed on <em>regulated</em> controlled and restricted drugs</li>
+</ul>
+<p class="question">
+<strong>Endorsements</strong> outline what <em>activities</em> each health professional is <strong>authorised</strong> to perform
+</p>
+</section>
+<section id="doctors" class="slide level2">
+<h2>Doctors</h2>
+<p class="question">
+To the extent necessary to practice medicine, doctors are authorised to obtain, possess, prescribe, dispense, administer and supply controlled drugs (s58) and restricted drugs (s161)
+</p>
+<p class="fragment">
+Other health professionals: nurses, pharmacists, podiatrists, dentists, …, are <em>authorised</em> to perform subsets of these activities.
+</p>
+<!-- Also sometimes extensions, e.g. poisons and pharmacists -->
+</section>
+<section id="regulated-restricted-and-controlled-drugs" class="slide level2">
+<h2><em>Regulated</em> restricted and controlled drugs</h2>
+<ul>
+<li>Some drugs are subject to further regulations: regulated controlled drugs, regulated restricted drugs</li>
+<li>Typically this is limiting prescription of these drugs to particular medical specialties or indications</li>
+</ul>
+<p class="question">
+Examples include dexamphetamine (s78), medical cannabis (s78A), isotretinoin (s186), …
+</p>
+</section>
+<section id="requirements-on-a-prescription" class="slide level2">
+<h2>Requirements on a prescription</h2>
+<ul>
+<li>The HDPR stipulates what needs to be on a legal prescription for controlled drugs (s79) and restricted drugs (s190)</li>
+</ul>
+<p class="question">
+Some of the <strong>additional</strong> items needed on a controlled drug prescription: single drug, patient’s date of birth, quantity in words in figures
+</p>
+</section>
+<section id="further-restrictions-on-controlled-drugs" class="slide level2">
+<h2>Further restrictions on controlled drugs</h2>
+<ul>
+<li>Health professionals who are authorised to possess a controlled drug can’t self-administer it (s123)</li>
+<li>Unless the controlled has been prescribed (appropriately) by someone else (s123(2))</li>
+</ul>
+<p class="question">
+There are similar restrictions in the <em>Medicines and Poisons Act 2019</em>—see s40
+</p>
+<p class="question fragment">
+Additional guidance is provided in the Code of Conduct (9.2.2)
+</p>
+<aside class="notes">
+<p>The guidance provided in the Medical Board of Australia <em>Code of Conduct</em> (9.2.2):</p>
+<blockquote>
+<p>Good medical practice involves: …<br />
+Seeking independent, objective advice when you need medical care, and being aware of the risks of self-diagnosis and self-treatment</p>
+</blockquote>
+</aside>
+</section></section>
+<section>
+<section id="cases-questions" class="title-slide slide level1">
+<h1>Cases &amp; questions</h1>
+
+</section>
+<section id="a-general-model-for-decision-making" class="slide level2" data-background="#FBB800">
+<h2 data-background="#FBB800">A general model for decision-making</h2>
+<ol type="1">
+<li>Identify the problem and possible consequences of the problem</li>
+<li>Identify relevant law and professional standards that apply to the case</li>
+<li>Identify the available options for resolving the problem and the reasons for or against each one</li>
+<li>Formulate a plan of action to resolve the problem</li>
+</ol>
+<aside class="notes">
+<p>A more general structure can be found in <span class="citation" data-cites="Winch:2014td">Winch, Milligan, and Rolley (2014)</span></p>
+</aside>
+</section>
+<section id="a-case-1" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6">A case</h2>
+<p>Samara is 35 and looks after 3 children. She suffers regular migraines, depression and anxiety. Samara presents to the practice asking for a script for her anxiety and pain tablets.</p>
+<p>She is currently taking nitrazepam, diazepam, tramadol, amitriptyline and some antibiotics for a recent upper respiratory infection.</p>
+<p>Looking at your records she has been coming more regularly than you would expect for her pain and anxiety tablets. One of your colleagues recently noted a concern that she was “relying on these medicines too much”.</p>
+</section>
+<section id="responding-to-the-case" class="slide level2">
+<h2>Responding to the case</h2>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Considerations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Problem and possible consequences</td>
+<td>Medication use disorder; uncertainty regarding diagnosis; serious possible consequences</td>
+</tr>
+<tr class="even">
+<td>Relevant law and professional standards</td>
+<td>Can provide legal prescription; professional standards in relation to medication use disorder are evolving</td>
+</tr>
+<tr class="odd">
+<td>Options</td>
+<td>Prescribe; extended consultation; refer</td>
+</tr>
+<tr class="even">
+<td>Plan</td>
+<td>What do you do?</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="case-outcome" class="slide level2">
+<h2>Case outcome</h2>
+<p>This example is based on one of the cases discussed in <span class="citation" data-cites="Forbes2014">Forbes (2014)</span>.</p>
+<p>The patient in this case died from drug misadventure with toxic levels of the anxiety and pain medications.</p>
+<p>She was identified as a patient at risk of drug misadventure by multiple prescribers and her pharmacist, but there was limited discussion between them and both continued to prescribe and dispense.</p>
+</section>
+<section id="some-additional-questions-1" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6">Some additional questions</h2>
+<ul>
+<li>Can you/should you self-prescribe tramadol?</li>
+<li>Can you/should you self-prescribe ketamine?</li>
+<li>Can you/should you prescribe hydroxychloroquine to a family member?</li>
+</ul>
+</section>
+<section id="further-details" class="slide level2">
+<h2>Further details</h2>
+<!-- 
+|        Drug        |        Class         | Sched. |                       Law/Guidance                      |
+|--------------------|----------------------|----------|---------------------------------------------------------|
+| Tramadol           | Opioid               | S4       | HDPR, *Medicines and Poisons Act 2019*, Code of conduct |
+| Ketamine           | NMDA antagonist      | S8       | HDPR, *Medicines and Poisons Act 2019*, Code of conduct |
+| Hydroxychloroquine | Antiprotozoal, DMARD | S4       | HDPR, Code of conduct                                                        | -->
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Drug
+</th>
+<th style="text-align:left;">
+Class
+</th>
+<th style="text-align:left;">
+Schedule
+</th>
+<th style="text-align:left;">
+Law/Guidance
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 8em; ">
+Tramadol
+</td>
+<td style="text-align:left;width: 8em; ">
+Opioid
+</td>
+<td style="text-align:left;width: 4em; ">
+S4
+</td>
+<td style="text-align:left;width: 10em; ">
+HDPR, Medicines and Poisons Act 2019, Code of conduct
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+Ketamine
+</td>
+<td style="text-align:left;width: 8em; ">
+NMDA antagonist
+</td>
+<td style="text-align:left;width: 4em; ">
+S8
+</td>
+<td style="text-align:left;width: 10em; ">
+HDPR, Medicines and Poisons Act 2019, Code of conduct
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 8em; ">
+Hydroxychloroquine
+</td>
+<td style="text-align:left;width: 8em; ">
+Antiprotozoal, DMARD
+</td>
+<td style="text-align:left;width: 4em; ">
+S4
+</td>
+<td style="text-align:left;width: 10em; ">
+HDPR, Code of conduct
+</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>You should have enough details from within the lecture to determine whether a medical practitioner <em>can</em> and <em>should</em> self-prescribe/prescribe these medicines in the specified context.</p>
+<p>Hydroxychloroquine is used in some patients for rheumatoid athritis as Disease Modifying Antirheumatic Drug (DMARD).</p>
+<p>It is also currently under investigation as a treatment for COVID-19. Since this has become public knowledge a lot of people have been presenting to pharmacies with prescriptions for it—including medical practitioners, dentists and nurse practitioners. See <a href="https://www.psa.org.au/prescribing-hydroxychloroquine-for-covid-19/">here</a>.</p>
+<p>This risks supply for regular patients and for investigational trials to assess its efficacy in COVID-19</p>
+</aside>
+</section></section>
+<section>
+<section id="conclusion" class="title-slide slide level1">
+<h1>Conclusion</h1>
+
+</section>
+<section id="key-concepts-1" class="slide level2">
+<h2>Key Concepts</h2>
+<div style="font-size: 80%">
+<ul>
+<li>Medicines are tightly regulated. Two important legislative instruments are the <em>Standard for Uniform Scheduling for Medicines and Poisons</em> (SUSMP) and <em>Health (Drugs and Poisons) Regulation 1996</em> (HDPR)
+<ul>
+<li>Drugs are regulated according to <strong>schedules</strong>. The SUSMP provides the schedules for drugs in Australia.</li>
+<li>HDPR stipulates the who, how, when and where of prescribing, dispensing and administration of drugs in Queensland</li>
+</ul></li>
+<li>Professional decisions rely on considerations of the law, ethics and the clinical context—it is rare that a professional decision can be made relying exclusively on any one of these</li>
+</ul>
+</div>
+</section>
+<section id="references" class="slide level2 unnumbered" style="font-size: 75%;">
+<h2 class="unnumbered" style="font-size: 75%;">References</h2>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-Forbes2014">
+<p>Forbes, C. 2014. “State Coroner’s Court of New South Wales: Inquest into the deaths of Christopher SALIB, Nathan ATTARD and Shamsad AKHTAR.” State Coroner’s Court of New South Wales. <a href="http://www.coroners.justice.nsw.gov.au/Documents/doctor%20shopping%20amended%20finding.pdf">http://www.coroners.justice.nsw.gov.au/Documents/doctor shopping amended finding.pdf</a>.</p>
+</div>
+<div id="ref-Winch:2014td">
+<p>Winch, Sarah, Eleanor Milligan, and Adam Rolley. 2014. “Clinical ethics for emergency healthcare.” In <em>Emergency and Trauma Care: For Nurses and Paramedics</em>, 1–16.</p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
