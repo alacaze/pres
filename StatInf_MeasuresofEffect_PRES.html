@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Statistical Inference &amp; Measures of Effect</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="files/myreveal2.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="files/header-attrs-2.1/header-attrs.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Statistical Inference &amp; Measures of Effect</h1>
+    <h2 class="author"><p>Adam La Caze<br />
+School of Pharmacy<br />
+The University of Queensland</p></h2>
+    <h3 class="date">April 2020</h3>
+</section>
+
+<section>
+<section id="introduction" class="title-slide slide level1">
+<h1>Introduction</h1>
+
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<ol type="1">
+<li>Understand the logic of statistical testing in clinical trials</li>
+<li>Demonstrate an understanding of key statistical concepts: hypothesis testing, <span class="math inline">\(p\)</span> values, confidence intervals and power</li>
+<li>Be able to describe and interpret common measures of effect used in clinical epidemiology</li>
+</ol>
+</section>
+<section id="clinical-epidemiology" class="slide level2">
+<h2>Clinical epidemiology</h2>
+<dl>
+<dt>Bias</dt>
+<dd><p>refers to any systematic error in estimating the effect of a drug, exposure or risk factor on a specified outcome</p>
+</dd>
+<dt>Random error</dt>
+<dd><p>variation that occurs within stochastic processes</p>
+</dd>
+</dl>
+</section>
+<section id="sources-of-error" class="slide level2">
+<h2>Sources of error</h2>
+<p><img data-src="../figtab/ConceptMap_v2.png" alt="A map of different types of bias that lead to inaccurate estimation" /></p>
+</section>
+<section id="task" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6">Task</h2>
+<p>Focusing on the primary endpoint of the study:</p>
+<ol type="1">
+<li>Identify the PICO</li>
+<li>Null hypothesis</li>
+<li>The statistical result for the study you are assigned</li>
+</ol>
+<p>Based on the information available to you, what inference does the study support?</p>
+</section>
+<section id="pico" class="slide level2">
+<h2>PICO</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">PICO</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Participants</td>
+<td style="text-align: left;">Who are the participants in the study. What were the inclusion/exclusion criteria? Who participated?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Intervention</td>
+<td style="text-align: left;">What is the intervention under investigation?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Comparator</td>
+<td style="text-align: left;">What standard treatment is the intervention being tested against? Might be placebo or active control.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Outcome</td>
+<td style="text-align: left;">What is the primary endpoint/outcome of the study</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="logical-of-statistical-inference" class="title-slide slide level1">
+<h1>Logical of statistical inference</h1>
+<ol type="1">
+<li>Understand the logic of statistical testing in clinical trials</li>
+</ol>
+</section>
+<section id="fair-coin" class="slide level2">
+<h2>Fair coin</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>ct1 &lt;-<span class="st"> </span><span class="kw">rbinom</span>(<span class="dv">10</span>, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>ct1</span></code></pre></div>
+<pre><code>##  [1] 0 1 0 1 1 0 1 1 1 0</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>sum_ct1 &lt;-<span class="st"> </span><span class="kw">sum</span>(ct1)</span></code></pre></div>
+<p>In this series of tosses, there were 6 <span class="math inline">\(H\)</span> and 4 <span class="math inline">\(T\)</span>.</p>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>If we run the same code a second time, we get:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">set.seed</span>(<span class="dv">12</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>ct2 &lt;-<span class="st"> </span><span class="kw">rbinom</span>(<span class="dv">10</span>, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>ct2</span></code></pre></div>
+<pre><code>##  [1] 0 1 1 0 0 0 0 1 0 0</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>sum_ct2 &lt;-<span class="st"> </span><span class="kw">sum</span>(ct2)</span></code></pre></div>
+<p>This time we see 3 <span class="math inline">\(H\)</span> and 7 <span class="math inline">\(T\)</span>.</p>
+</section>
+<section id="x-10-coin-toss-experiment" class="slide level2">
+<h2>10 x 10 coin toss experiment</h2>
+<pre><code>##  [1] 5 8 5 5 7 5 7 4 7 4</code></pre>
+<p><img src="StatInf_MeasuresofEffect_PRES_files/figure-revealjs/unnamed-chunk-5-1.png" width="768" style="display: block; margin: auto;" /></p>
+<!-- ```{r cten, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE, tidy=TRUE, results=TRUE, error=FALSE, fig.align = 'center', fig.caption = 'Results of 10 repetitions of the 10 coin toss experiment.'}
+
+c10_plot
+
+``` -->
+<p>The mean number of <span class="math inline">\(H\)</span> in this series was 5.7.</p>
+</section>
+<section id="x-10-coin-toss-experiment-1" class="slide level2">
+<h2>10,000 x 10 coin toss experiment</h2>
+<p><img src="StatInf_MeasuresofEffect_PRES_files/figure-revealjs/ctenthou-1.png" width="768" style="display: block; margin: auto;" /></p>
+</section>
+<section id="task-1" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6">Task</h2>
+<p>Imagine you have coin of unknown bias (i.e. the probability of <span class="math inline">\(H\)</span> is unknown—it is unknown whether the coin is fair, favours <span class="math inline">\(T\)</span> or favours <span class="math inline">\(H\)</span>). What test could you conduct to assess whether the coin is fair?</p>
+<p>Attempt to describe the hypothesis you are testing and the statistical model you are using for the test.</p>
+</section>
+<section id="coin-of-unknown-bias" class="slide level2">
+<h2>Coin of unknown bias</h2>
+<div style="font-size: 80%;">
+<ol type="1">
+<li class="fragment">Consider what outcomes we would expect <em>if</em> the coin was fair. This is called the <em>null hypothesis</em> and informs the <em>statistical model</em>.</li>
+<li class="fragment">Use what we know about the statistical model to determine how many repetitions of the 10 coin toss experiment we would need to do for our results to be reliable. This is a consideration of study <em>power</em>.</li>
+<li class="fragment">Conduct the experiment. Compare the mean <em>observed</em> result with what we would expect <em>if</em> the coin was fair.</li>
+<li class="fragment">If the <em>observed</em> mean is considerably larger or smaller than 5, then the study provides evidence that the coin is not fair.</li>
+<li class="fragment">The probability of observing a result more extreme than the one we did can be calculated using the statistical model assuming the null hypothesis—this is the <em><span class="math inline">\(p\)</span> value</em>.</li>
+</ol>
+</div>
+</section>
+<section id="conduct-the-experiment" class="slide level2">
+<h2>Conduct the experiment</h2>
+<p><img src="StatInf_MeasuresofEffect_PRES_files/figure-revealjs/unnamed-chunk-6-1.png" width="768" style="display: block; margin: auto;" /></p>
+<!-- The mean number of $H$ for the fair coin was 4.998 and for the coin of unknown bias was 6.9982.
+What do you think the probability of $H$ is for the coin of unknown bias? -->
+</section></section>
+<section>
+<section id="key-statistical-concepts" class="title-slide slide level1">
+<h1>Key statistical concepts</h1>
+<ol start="2" type="1">
+<li>Demonstrate an understanding of key statistical concepts: hypothesis testing, <span class="math inline">\(p\)</span> values, confidence intervals and power</li>
+</ol>
+</section>
+<section id="important-definitions" class="slide level2">
+<h2>Important definitions</h2>
+<dl>
+<dt>Null hypothesis</dt>
+<dd><p>the statistical hypothesis that there is no (important) difference between experimental treatment and control in relation to the primary endpoint</p>
+</dd>
+<dt>Sampling distribution</dt>
+<dd><p>is the distribution of expected results expected assuming a particular hypothesis about the effect size is true (e.g. the null hypothesis), all the assumptions associated with the statistical model are true, and the trial is conducted as planned.</p>
+</dd>
+</dl>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<dl>
+<dt>Type I error (<span class="math inline">\(\alpha\)</span>)</dt>
+<dd><p>is the pre-test probability of <em>rejecting</em> the null hypothesis when the null hypothesis is true. It is usually set at 0.05.</p>
+</dd>
+<dt>Type II error (<span class="math inline">\(\beta\)</span>)</dt>
+<dd><p><span class="math inline">\(\beta\)</span> is the pre-test probability of <em>accepting</em> the null hypothesis when the alternative hypothesis is true.</p>
+</dd>
+<dt>Power <span class="math inline">\((1-\beta)\)</span></dt>
+<dd><p>is the pre-study probability that the study will produce a statistically significant result for a given <em>sample size</em> and <em>postulated effect size</em></p>
+</dd>
+</dl>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<dl>
+<dt><span class="math inline">\(p\)</span> value</dt>
+<dd><p>a measure of the compatibility of the observed data with the data that would be expected if the null hypothesis was true when all other statistical and methodological assumptions are met</p>
+</dd>
+<dt>Confidence interval</dt>
+<dd><p>is the range of effect sizes that is considered more compatible with the observed data assuming the statistical and methodological assumptions of the study are met. A 95% confidence interval provides the range of values for which a test of an effect size within the range against the observed data would provide a <span class="math inline">\(p\)</span> value <span class="math inline">\(&gt; 0.05\)</span>.</p>
+</dd>
+</dl>
+</section>
+<section id="hypothesis-tests" class="slide level2">
+<h2>Hypothesis tests</h2>
+<p><img src="StatInf_MeasuresofEffect_PRES_files/figure-revealjs/unnamed-chunk-7-1.png" width="672" /></p>
+</section>
+<section id="an-overpowered-test" class="slide level2">
+<h2>An overpowered test</h2>
+<p><img src="StatInf_MeasuresofEffect_PRES_files/figure-revealjs/unnamed-chunk-8-1.png" width="768" /></p>
+</section>
+<section id="an-underpowered-test" class="slide level2">
+<h2>An underpowered test</h2>
+<p><img src="StatInf_MeasuresofEffect_PRES_files/figure-revealjs/unnamed-chunk-9-1.png" width="768" /></p>
+</section>
+<section id="take-homes" class="slide level2" data-background="#FBB800">
+<h2 data-background="#FBB800">Take homes</h2>
+<ul>
+<li>The most-often used cut-off for <span class="math inline">\(p\)</span> values used in clinical research is 0.05.</li>
+<li>If the <span class="math inline">\(p\)</span> value is <span class="math inline">\(&lt; 0.05\)</span>, the result will be considered statistically significant</li>
+<li>A statistically significant result for the <em>primary endpoint</em> of a trial is more trustworthy than statistically significant results on secondary endpoints or subgroups—the trial was set up the test the primary endpoint.</li>
+<li>Once you have determined that the primary endpoint of trial was <em>statistically significant</em>, the next question is to determine whether the <em>magnitude</em> of the effect is <em>clinically significant</em></li>
+</ul>
+</section></section>
+<section>
+<section id="measures-of-effect" class="title-slide slide level1">
+<h1>Measures of effect</h1>
+<ol start="3" type="1">
+<li>Be able to describe and interpret common measures of effect used in clinical epidemiology</li>
+</ol>
+</section>
+<section id="how-large-is-the-treatment-effect" class="slide level2">
+<h2>How large is the treatment effect?</h2>
+<p>A company has developed a new drug that will reduce your relative risk of stroke by 50%</p>
+<p class="question fragment">
+Who is interested?
+</p>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<ul>
+<li class="fragment">You need to take the drug for 10 years</li>
+<li class="fragment">It will cause an irritating rash in 2% and cause sexual dysfunction in 1%</li>
+<li class="fragment">Given you are young and healthy, your baseline risk of stroke over the next 10 years is 0.02%</li>
+</ul>
+<p class="question fragment">
+Who is interested?
+</p>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<p class="fragment">
+<span class="math display">\[RR = \frac{I_t}{I_c} = 0.01/0.02 = 0.5\]</span>
+</p>
+<p class="fragment">
+<span class="math display">\[ARR = I_c - I_t = 0.02 - 0.01 = 0.01\%\]</span>
+</p>
+<p class="fragment">
+<span class="math display">\[NNT = \frac{100}{ARR} = \frac{100}{0.01} = 10000\]</span>
+</p>
+<p class="fragment">
+Sexual dysfunction: <span class="math display">\[NNH  = \frac{100}{ARI} = \frac{100}{1} = 100\]</span>
+</p>
+</section>
+<section id="task-2" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6">Task</h2>
+<p>For the empagliflozin paper (EMPA-REG OUTCOMES):</p>
+<ol type="1">
+<li>Was there an effect on the primary endpoint?</li>
+<li>If yes, what was the size of the effect on the primary endpoint? Where appropriate present the outcome in terms of
+<ul>
+<li>hazard ratio,</li>
+<li>relative risk ratio, relative risk reduction</li>
+<li>absolute risk reduction</li>
+<li>number needed to treat</li>
+</ul></li>
+</ol>
+<p>If you have time, have a look at the ertugliflozin paper and the simvastatin paper.</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
