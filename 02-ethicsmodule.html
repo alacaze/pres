@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Privacy Law and Ethics</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="files/myreveal2.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="files/header-attrs-2.3/header-attrs.js"></script>
+    <link href="files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Privacy Law and Ethics</h1>
+    <h2 class="author"><p>Adam La Caze<br />
+School of Pharmacy<br />
+The University of Queensland</p></h2>
+</section>
+
+<section>
+<section id="introduction" class="title-slide slide level1">
+<h1>Introduction</h1>
+
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<p>Understanding your legal and professional responsibilities is critical for making good decisions.</p>
+<p>You are expected to have a familiarity with key legal and professional resources (see Table in next slide). This means being able to find your way around the key legislative documents.</p>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>The objectives of this module are</p>
+<ol type="1">
+<li>Understand national privacy regulation and how it is enacted, especially relating to the <em>Australian Privacy Priniciples</em></li>
+<li>Be able to navigate the <a href="https://www.oaic.gov.au/agencies-and-organisations/app-guidelines/">Australian Privacy Principles guidelines</a></li>
+<li>Be able to apply the Australian Privacy Principles to pharmacy practice</li>
+</ol>
+</section>
+<section id="key-legal-and-professional-resources-for-pharmacy-practice" class="slide level2">
+<h2>Key legal and professional resources for pharmacy practice</h2>
+<table>
+<caption>Key regulation and practice resources</caption>
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Resource</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://www.legislation.qld.gov.au/view/html/inforce/current/sl-1996-0414">HDPR</a></td>
+<td>Drug/medicine regulations for QLD</td>
+</tr>
+<tr class="even">
+<td>PSA <a href="https://www.psa.org.au/membership/ethics">Code of Ethics</a></td>
+<td>Outlines key professional standards</td>
+</tr>
+<tr class="odd">
+<td>PBA <a href="http://www.pharmacyboard.gov.au/Codes-Guidelines/Code-of-conduct.aspx">Code of Conduct</a></td>
+<td>Professional standards for health professions</td>
+</tr>
+<tr class="even">
+<td>PBA <a href="http://www.pharmacyboard.gov.au/Codes-Guidelines.aspx">Guidelines and Policies</a></td>
+<td>Important professional guidance documents.</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.oaic.gov.au/privacy-law/privacy-act/"><em>Privacy Act 1988</em></a></td>
+<td><a href="https://www.oaic.gov.au/resources/individuals/privacy-fact-sheets/general/privacy-fact-sheet-17-australian-privacy-principles.pdf">Privacy fact sheet 17</a> provides a summary</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.oaic.gov.au/privacy-law/privacy-act/notifiable-data-breaches-scheme">Notifiable Data Breaches scheme</a></td>
+<td>New regulations for notifying people of data breaches that affects pharmacies</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>The <em>Health (Drugs and Poisons) Regulations</em> are due to be replaced by the <em>Medicines and Poisons Regulation (Medicines Regulation)</em>. This process is well under way, but it is unclear exactly when the change will occur.</p>
+</aside>
+</section>
+<section id="key-concepts" class="slide level2">
+<h2>Key concepts</h2>
+<div style="font-size: 85%">
+<ol type="1">
+<li>Australian Privacy Law is <em>principle-based</em>. There are 13 Australian Privacy Principles.</li>
+<li>Pharmacists have direct responsibilities under the <em>Privacy Act</em>. Pharmacists working privately are an ‘APP entity’.</li>
+<li>Personal information is any information that can identify a person</li>
+<li>There are additional obligations when collecting, using or disclosing sensitive information, including health information</li>
+<li>Pharmacists can <em>collect</em> health information to provide health services</li>
+<li>Pharmacists often need consent from consumers prior to <em>disclosing</em> health information or <em>using</em> information for a secondary purpose (there are some exceptions)</li>
+</ol>
+</div>
+</section></section>
+<section>
+<section id="australian-privacy-principles-background-and-key-terms" class="title-slide slide level1">
+<h1>Australian Privacy Principles: Background and Key Terms</h1>
+
+</section>
+<section id="principle-based-legislation" class="slide level2">
+<h2>Principle-based legislation</h2>
+<p>The <em>Privacy Act</em> provides 13 high-level principles for guiding what is to be considered ‘personal information’, and how it can be collected and used.</p>
+<p>Principle-based legislation focuses on a small number of key principles that need to be considered. It is then the responsibility of businesses and other entities to develop and implement policies and practices that are consistent with these principles.</p>
+<p class="question">
+Compare this approach to the approach used in the HDPR
+</p>
+</section>
+<section id="guidance" class="slide level2">
+<h2>Guidance</h2>
+<p>The <a href="https://www.oaic.gov.au/">Office of the Australian Information Commissioner</a> provide a lot of guidance on the Australian Privacy Principles.</p>
+<p>We will focus on the summary provided in <a href="https://www.oaic.gov.au/resources/individuals/privacy-fact-sheets/general/privacy-fact-sheet-17-australian-privacy-principles.pdf">Privacy fact sheet 17</a> and <a href="https://www.oaic.gov.au/agencies-and-organisations/app-guidelines/">Australian Privacy Principles (APP) Guidelines</a>.</p>
+<p class="question">
+Download these now
+</p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p>The APP Guildelines is a 200+ page document. The <code>pdf</code> is relatively easy to navigate electronically.</p>
+<p>The initial chapters outline the key terms (Chapter A–D). Subsequent chapters refer to each APP. Each point made in the guidelines has a unique reference, e.g. A.2 is point two of chapter A; 6.21 is point 21 of chapter 6 regarding APP 6.</p>
+</section>
+<section id="the-australian-privacy-principles-apps-16" class="slide level2">
+<h2>The Australian Privacy Principles (APPs 1–6)</h2>
+<ol type="1">
+<li>Open and transparent management of personal information</li>
+<li>Anonymity and pseudonymity</li>
+<li>Collection of solicited personal information</li>
+<li>Dealing with unsolicited personal information</li>
+<li>Notification of the collection of personal information</li>
+<li>Use or disclosure of personal information</li>
+</ol>
+</section>
+<section id="the-australian-privacy-principles-apps-713" class="slide level2">
+<h2>The Australian Privacy Principles (APPs 7–13)</h2>
+<ol start="7" type="1">
+<li>Direct marketing</li>
+<li>Cross-border disclosure of personal information</li>
+<li>Adoption, use or disclosure of government identifiers</li>
+<li>Quality of personal information</li>
+<li>Security of personal information</li>
+<li>Access to personal information</li>
+<li>Correction of personal information</li>
+</ol>
+<aside class="notes">
+<p>The <a href="https://www.oaic.gov.au/agencies-and-organisations/app-guidelines/">APP Guidelines</a> get into detail on what each principle means (in general, this document is more helpful than the <em>Privacy Act</em> itself).</p>
+</aside>
+</section>
+<section id="key-terms-personal-information" class="slide level2">
+<h2>Key terms: Personal information</h2>
+<p class="question">
+See the definition in the APP Guideline, B.85.
+</p>
+<p>Personal information is <em>any</em> “information or opinion about an identified individual, or an individual who is reasonably identifiable”.</p>
+<p>This covers a lot. It includes:</p>
+<blockquote>
+<p>…an individual’s name, signature, address, telephone number, date of birth, medical records, bank account details, … (B.86, APP Guidelines)</p>
+</blockquote>
+</section>
+<section id="key-terms-sensitive-information" class="slide level2">
+<h2>Key terms: Sensitive information</h2>
+<p>“Sensitive information” is personal information, that has additional protections because of the nature of the information.</p>
+<p>Sensitive information includes information or an opinion about an individual’s racial or ethnic origin, political opinions, religious beliefs, etc.</p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p>Importantly: <em>health information</em> is sensitive information.</p>
+<p class="question">
+This means there are additional considerations regarding the collection, use and disclosure of health information
+</p>
+<p class="question">
+Read the information provided regarding health information in the APP Guidelines, B.74–B.75
+</p>
+</section>
+<section id="key-terms-app-entity" class="slide level2">
+<h2>Key terms: APP entity</h2>
+<div style="font-size: 85%">
+<p class="question">
+Pharmacists are an APP entity: they have responsibilities under the <em>Privacy Act</em>
+</p>
+<p>Large Australian Government agencies and businesses have responsibilities under the <em>Privacy Act</em> (including, for instance, UQ).</p>
+<p>So too are private health service providers (see <a href="https://www.oaic.gov.au/privacy-law/rights-and-responsibilities">link</a>). This includes pharmacists working in community pharmacies, private hospital pharmacies and consultant pharmacists.</p>
+<p>The <em>Privacy Act</em> doesn’t cover state or territory government agencies, which can have their own privacy regulations—though some refer back to the APP (see <a href="https://www.oic.qld.gov.au/">Office of Information Commissioner (QLD)</a>).</p>
+</div>
+</section></section>
+<section>
+<section id="responsibilities-under-specific-apps" class="title-slide slide level1">
+<h1>Responsibilities under specific APPs</h1>
+
+</section>
+<section id="app-1-open-and-transparent-management-of-personal-information" class="slide level2">
+<h2>APP 1: Open and transparent management of personal information</h2>
+<p class="question">
+What is your privacy policy?
+</p>
+<p>All APP entities, including pharmacists, need to:</p>
+<ol type="1">
+<li>Implement practices, procedures and systems that comply with the APPs</li>
+<li>Have a clearly expressed policy about how the entity manages personal information, and</li>
+<li>Make the policy freely available in an appropriate form</li>
+</ol>
+<p>Many pharmacies will have a privacy policy as part of their accreditation.</p>
+</section>
+<section id="app-3-collection-of-solicited-personal-information" class="slide level2">
+<h2>APP 3: Collection of solicited personal information</h2>
+<div style="font-size: 80%">
+<p class="question">
+What information can you ask someone to provide?
+</p>
+<h3 id="in-general">In general</h3>
+<p>An APP entity can’t ask you (solicit) personal information and then record it (collection) unless it is “reasonably necessary” and “directly related” to the function of the entity.</p>
+<p>It can’t <em>solicit</em> (or record) sensitive information unless you (i) consent and (ii) the information is “reasonably necessary” for the function of the entity.</p>
+<p class="question">
+A university might collect information about your academic record. It can’t solicit and record your political views.
+</p>
+</div>
+</section>
+<section id="app-3-collection-of-solicited-personal-information-1" class="slide level2">
+<h2>APP 3: Collection of solicited personal information</h2>
+<h3 id="health-services">Health services</h3>
+<div style="font-size: 85%">
+<p>Pharmacies can collect <em>health information</em> (which is sensitive information) providing it is <em>necessary</em> to provide the health service <em>and</em> either collection is required under law, or in accordance with professional standards. (APP Guidelines, 3.43)</p>
+<p class="question">
+Provision of a health service is a “permitted health situation” (APP Guidelines D.1–4)
+</p>
+Permitted health situations permit health professionals to collect, use and disclose health information in specific circumstances.
+</div>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p class="question">
+Do the permitted health situations permit pharmacists to disclose health information to a person’s general practitioner? (see APP Guidelines D.2)
+</p>
+<!-- No; not really, but it is permitted if we consider the reason for disclosure the primary purpose; we can also question whether contacting the prescriber is *disclosing* -->
+</section>
+<section id="app-6-use-or-disclosure-of-personal-information" class="slide level2">
+<h2>APP 6: Use or disclosure of personal information</h2>
+<p class="question">
+What can you do with the information you have collected?
+</p>
+<h3 id="key-idea">Key idea</h3>
+<ul>
+<li>You hold personal information that was collected for a “primary purpose”</li>
+<li>You can’t disclose that information for a “secondary purpose” without explicit consent unless an exemption applies</li>
+</ul>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<p class="question">
+APP Guidelines define “primary purpose” (B.98, B.101), “secondary purpose” (B.98) and “consent” (B.35)
+</p>
+<p class="question">
+What are the exemptions?—“permitted general situations” (Chapter C) and “permitted health situations” (Chapter D)
+</p>
+</section>
+<section id="app-6-use-or-disclosure-of-personal-information-1" class="slide level2">
+<h2>APP 6: Use or disclosure of personal information</h2>
+<h3 id="relevance-to-pharmacy-primary-purpose">Relevance to pharmacy: primary purpose</h3>
+<p>The “primary purpose” pharmacists collect health information is typically to:</p>
+<ul>
+<li>Dispense prescriptions</li>
+<li>Supply over-the-counter medicines</li>
+<li>Undertake medication review</li>
+<li>Provide care to the consumer (most broad)</li>
+</ul>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<p>If you want to disclose this information to the third party, such as to another health professional or a family member of the consumer: you need consent from the consumer (or an exemption).</p>
+<p class="question">
+Contexts will differ. If you disclose information for what you consider to be the primary purpose you will need to justify your decision.
+</p>
+<p class="question">
+“Primary purpose” should be defined narrowly. APP Guidelines, B.101.
+</p>
+</section>
+<section id="app-6-use-or-disclosure-of-personal-information-2" class="slide level2">
+<h2>APP 6: Use or disclosure of personal information</h2>
+<h3 id="relevance-to-pharmacy-exemptions">Relevance to pharmacy: exemptions</h3>
+<p>Where the use or disclosure is required by law (APP Guideline 6.29)</p>
+<p class="question">
+Recording S3 psuedoephedrine sales in Project Stop
+</p>
+</section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<p>Where a “permitted general situation” applies (APP Guidelines 6.32–6.46). The most relevant is: “Lessening or preventing a serious threat to life, health or safety”.</p>
+<p class="question">
+Disclosing a consumer’s medication history to a paramedic attending the consumer who has passed out in your pharmacy
+</p>
+<p>“Permitted health situations” are most relevant for the collection of health information by pharmacists and permit disclosure when conducting appropriate research (APP Guidelines, Chapter D)</p>
+</section>
+<section id="professional-guidance" class="slide level2">
+<h2>Professional Guidance</h2>
+<p>Professional guidance is consistent with the APP. However the details of what is required is in the APP documents.</p>
+</section>
+<section id="section-7" class="slide level2">
+<h2></h2>
+<ul>
+<li><p>PBA Code of Conduct, 3.4 “Confidentiality and privacy”. Some of the items:</p>
+<blockquote>
+<p>seeking consent from patients or clients before disclosing information, where practicable<br />
+…<br />
+sharing information appropriately about patients or clients for their healthcare while remaining consistent with privacy legislation and professional guidelines about confidentiality</p>
+</blockquote></li>
+</ul>
+</section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<ul>
+<li><p>PSA Code of Ethics, Principle 2 Informed Consent. Including:</p>
+<blockquote>
+<p>2.5 Ensure confidentiality of the consumer’s information</p>
+</blockquote></li>
+</ul>
+</section></section>
+<section>
+<section id="notifiable-data-breaches-scheme" class="title-slide slide level1">
+<h1>Notifiable Data Breaches scheme</h1>
+
+</section>
+<section id="notifiable-data-breaches" class="slide level2">
+<h2>Notifiable Data Breaches</h2>
+<p>Since February 2018 certain APP entities have an obligation to notify affected individuals and the Australian Information Commissioner if there has been a data breach that is likely to result in serious harm.</p>
+<p class="question">
+See <a href="https://www.oaic.gov.au/privacy-law/privacy-act/notifiable-data-breaches-scheme">website</a>, which is very helpful.
+</p>
+</section>
+<section id="what-is-a-data-breach-and-who-needs-to-notify" class="slide level2">
+<h2>What is a data breach and who needs to notify</h2>
+<p><a href="https://www.oaic.gov.au/privacy-law/privacy-act/notifiable-data-breaches-scheme/identifying-eligible-data-breaches">Data breaches</a> occur whenever there is unauthorised access, disclosure or loss of data from an APP entity.</p>
+<p>Community pharmacies (and consultant pharmacists) are <a href="https://www.oaic.gov.au/agencies-and-organisations/faqs-for-agencies-orgs/health-service-providers/is-my-organisation-a-health-service-provider">private health services providers</a>—this means they have responsibilities under the <em>Privacy Act</em> and the notifiable data breaches scheme.</p>
+</section>
+<section id="which-data-breaches-require-notification" class="slide level2">
+<h2>Which data breaches require notification</h2>
+<p>Pharmacies have an obligation to notify individuals and the Australian Information Commissioner regarding any data breach that is likely to result in <a href="https://www.oaic.gov.au/privacy-law/privacy-act/notifiable-data-breaches-scheme/identifying-eligible-data-breaches"><em>serious harm</em></a> to any of the affected individuals.</p>
+<blockquote>
+<p>The phrase ‘likely to occur’ means the risk of serious harm to an individual is more probable than not.</p>
+</blockquote>
+<blockquote>
+<p>In the context of a data breach, serious harm to an individual may include serious physical, psychological, emotional, financial, or reputational harm.</p>
+</blockquote>
+</section>
+<section id="section-9" class="slide level2">
+<h2></h2>
+<p>The judgement is made on the basis of a ‘reasonable person’ and depends on the extent of the breach, the nature of the data and who may have unauthorised access to the data.</p>
+<p>Given the sensitive nature of health information kept by pharmacies, any significant data breach is likely to meet these definitions.</p>
+</section></section>
+<section>
+<section id="applying-the-app-to-practice-scenarios" class="title-slide slide level1">
+<h1>Applying the APP to practice scenarios</h1>
+
+</section>
+<section id="what-to-do" class="slide level2">
+<h2>What to do</h2>
+<p>Think through the following practice scenarios.</p>
+<p>References to the APP Guidelines are provided to assist.</p>
+<p>Different opinions are possible for some of these scenarios. The onus is on you to justify you decisions in accordance with the APPs.</p>
+</section>
+<section id="collecting-information" class="slide level2">
+<h2>Collecting information</h2>
+<p class="question">
+You worry that a consumer is purchasing too much Panadeine Extra ® tablets (paracetamol/codeine 500mg/15mg, 24)
+</p>
+<p class="question">
+Can you request and record this consumer’s driver’s license details?
+</p>
+<p>This scenario relates to APP 3. Things to consider:</p>
+<ul>
+<li>What kind of information is this?</li>
+<li>Is it “reasonably neccessary”? (3.18)</li>
+<li>Does an exemption apply?</li>
+</ul>
+</section>
+<section id="disclosing-information" class="slide level2">
+<h2>Disclosing information</h2>
+<p class="question">
+A consumer would like a detailed receipt for all his wife’s medication purchases for the tax year.
+</p>
+<p class="question">
+Can you comply?
+</p>
+<p>This scenario relates to APP 6. Things to consider:</p>
+<ul>
+<li>What kind of information is this?</li>
+<li>What was the “primary purpose” for collecting the data?</li>
+<li>Does an exemption apply?</li>
+<li>What do you need in order to comply?</li>
+</ul>
+</section>
+<section id="disclosing-information-1" class="slide level2">
+<h2>Disclosing information</h2>
+<p class="question">
+You are concerned for a consumer who is purchasing large quantities of ibuprofen/codeine. You would like to contact the consumer’s GP.
+</p>
+<p class="question">
+Do you need the consumer’s consent?
+</p>
+<p>This scenario relates to APP 6. Things to consider:</p>
+<ul>
+<li>What kind of information is this?</li>
+<li>What was the “primary purpose” for collecting this information?</li>
+<li>Does an exemption apply?</li>
+</ul>
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<p class="question">
+Can you contact the consumer’s GP if they refuse to provide consent?
+</p>
+<p>In what kind of situations would an exemption apply?</p>
+</section>
+<section id="next-step" class="slide level2">
+<h2>Next step</h2>
+<p class="question">
+Do the quiz!
+</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+   
+    
+    
+    
+    
+    
+    
+ 
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

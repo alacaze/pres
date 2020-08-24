@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Ethics, decisions and patient-centred care</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="files/myreveal2.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="files/header-attrs-2.3/header-attrs.js"></script>
+    <link href="files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Ethics, decisions and patient-centred care</h1>
+    <h2 class="author"><p>Adam La Caze<br />
+School of Pharmacy<br />
+The University of Queensland</p></h2>
+</section>
+
+<section>
+<section id="introduction" class="title-slide slide level1">
+<h1>Introduction</h1>
+
+</section>
+<section id="key-concepts" class="slide level2">
+<h2>Key concepts</h2>
+<ol type="1">
+<li>Healthcare decisions are ethical decisions</li>
+<li>Patient-centred care is good care. The justification for patient-centred care is ethical.</li>
+<li>We employ two psychological systems for making decisions. The quick, System 1, and the comprehensive, System 2.</li>
+<li>You should take a structured approach to making ethical decisions (much like you take a structured approach to clinical decisions)</li>
+</ol>
+</section>
+<section id="ethics-and-decisions" class="slide level2">
+<h2>Ethics and decisions</h2>
+<p>Most, if not all, professional decisions in pharmacy have an ethical component.</p>
+<p>One way to see this is to reflect on what people <em>value</em>.</p>
+</section>
+<section id="people-value-health" class="slide level2">
+<h2>People value health</h2>
+<p>People of very different ages, backgrounds and capacity <em>value</em> good health.</p>
+<p>This is despite the fact that people often have very different values and very different levels of health.</p>
+<p class="question">
+People value good health—however they perceive “good health”.
+</p>
+</section>
+<section id="personal-values-influence-health-choices" class="slide level2">
+<h2>Personal values influence health choices</h2>
+<p>The <em>choices</em> people make with regard to their health is influenced by a wide range of personal values.</p>
+<p>People differ greatly in their willingness to accept certain types of treatment, kinds of adverse effects, and levels of risk (among many other things)</p>
+<p class="question">
+Personal values inform health choices, and these vary greatly
+</p>
+</section>
+<section id="ethics-decisions-and-patient-centred-care" class="slide level2">
+<h2>Ethics, decisions and patient-centred care</h2>
+<p>Put these two together—people value health, and personal values inform health choices—and you get two important consequences.</p>
+<p class="fragment">
+You are here to help people about something that is very important to them. Part of being a health professional is accepting responsibility for a person’s health in terms of the care you provide.
+</p>
+<p class="fragment">
+You need to provide that care in way that is consistent with that person’s values. That is, you need to provide “patient-centred care”
+</p>
+<!-- <p class="question incremental">Key points: healthcare decisions are ethical decisions and you provide patient-centred care because it is the ethically right thing to do.</p>  -->
+</section>
+<section id="healthcare-decisions-are-ethical-decisions" class="slide level2">
+<h2>Healthcare decisions are ethical decisions</h2>
+<p>Appreciating the role you are playing as a healthcare professional is important.</p>
+<p>Many of the things you do as a pharmacist become routine—checking for allergies, consulting with a consumer regarding an antibiotic, dispensing emergency contraception, identifying a potential drug interaction, etc.</p>
+<p class="question">
+When you perform these tasks you make many decisions—given the context you are in, all of these decisions have an ethical component.
+</p>
+</section>
+<section id="patient-centred-care" class="slide level2">
+<h2>Patient-centred care</h2>
+<p>Providing patient-centred care is:</p>
+<p class="question">
+Providing care that is respectful of and responsive to individual patient preferences, needs, and values, and ensuring that patient values guide all clinical decisions <span class="citation" data-cites="national2001Crossing">(Institute of Medicine 2001)</span>
+</p>
+<p class="fragment">
+Patient-centred care is good care. It serves as a reminder of what the point of healthcare is. It is important because time pressures, financial pressures and the complexity of health care can make good decisions difficult to make.
+</p>
+</section>
+<section id="when-is-care-not-patient-centred" class="slide level2">
+<h2>When is care not patient-centred</h2>
+<p>Pharmacists fail to achieve the goal of patient-centred care when they:</p>
+<ul>
+<li class="fragment">Focus on a list of medicines rather than the patient taking those medicines</li>
+<li class="fragment">Counsel patients rather than consult with them</li>
+<li class="fragment">Fail to explore the patient’s reasons and expectations in relation to their medicines</li>
+</ul>
+<!-- <p class='fragment'>Focus on a list of medicines rather than the patient taking those medicines
+</p>
+
+<p class='fragment'>Counsel patients rather than consult with them
+</p>
+
+<p class='fragment'>Fail to explore the patient's reasons and expectations in relation to their medicines
+</p> -->
+</section></section>
+<section>
+<section id="decisions-and-heuristics" class="title-slide slide level1">
+<h1>Decisions and heuristics</h1>
+
+</section>
+<section id="why-isnt-the-ethical-dimension-of-our-decisions-more-obvious" class="slide level2">
+<h2>Why isn’t the ethical dimension of our decisions more obvious?</h2>
+<p>Sure there are some <em>big</em> ethical questions—suicide, abortion, drug addiction,…—and these can take time to think through.</p>
+<p>But for most of our day-to-day decisions we don’t seem to spend much time thinking about ethics.</p>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p class="question">
+Ethical decisions are like any other decision, they are informed by our values and our experiences.
+</p>
+<p class="fragment">
+We develop quite sophisticated sets of heuristics (rules of thumb) to handle the most common scenarios quickly and easily
+</p>
+<p class="fragment">
+Mostly these heuristics work very well, but sometimes they lead us astray—it is important to recognise the heuristics you use and to reflect on the values that underpin them
+</p>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<div style="font-size: 80%">
+<p>Let’s say that these two people present to your community pharmacy with similar symptoms and request a pseudoephedrine-containing cold and flu product.</p>
+<p><img data-src="figtab/Mug.jpg" alt="Mug shot" /> <img data-src="figtab/BW.jpg" alt="Betty" /></p>
+<p class="fragment">
+Chances are you are likely to treat their request differently, and to the extent that you do so it will be informed by a heuristic (which in turn is informed by explicit and implicit value judgements)
+</p>
+</div>
+</section>
+<section id="decisions-and-heuristics-1" class="slide level2">
+<h2>Decisions and heuristics</h2>
+<p>Daniel Kahneman is a psychologist who has done a lot of work on how people make decisions <span class="citation" data-cites="kahneman2011">(Kahneman 2011)</span>.</p>
+<p>His work identifies two systems</p>
+<p class="question">
+<strong>System 1</strong> operates automatically and quickly, with little or no effort and no sense of voluntary control
+</p>
+<p class="question">
+<strong>System 2</strong> allocates attention to the effortful mental activities that demand it, including complex computations.
+</p>
+<p>Recognising these systems is helpful for thinking about ethical decisions in pharmacy</p>
+</section>
+<section id="day-to-day-decisions" class="slide level2">
+<h2>Day-to-day decisions</h2>
+<p>There are some decisions that we make a lot.</p>
+<ul>
+<li>When do you sell pseudoephedrine?</li>
+<li>Which patients do you prioritise on the ward?</li>
+<li>How much discussion do you have with a consumer purchasing OTC salbutamol?</li>
+<li>Do you sell sharps kits?</li>
+<li>Do you provide emergency supply when the patient’s doctor can’t be contacted</li>
+</ul>
+<p>Most pharmacists will rely on <em>System 1</em> for these types of decisions.</p>
+</section>
+<section id="reflecting-on-day-to-day-decisions" class="slide level2">
+<h2>Reflecting on day-to-day decisions</h2>
+<p>When starting out, either as an intern or coming to a new area of practice, you often need to think through the day-to-day decisions of an area more deliberately—here you use <em>System 2</em>.</p>
+<p>There is good and bad about this.</p>
+<p class="question incremental">
+You take longer to make what is seen as a routine decision
+</p>
+<p class="question incremental">
+But you think that decision through more carefully
+</p>
+</section>
+<section id="reflecting-on-day-to-day-decisions-1" class="slide level2">
+<h2>Reflecting on day-to-day decisions</h2>
+<p>Sometime after it has shifted to a routine decision, it is important to reflect on whether you are making the <em>right</em> decision</p>
+<ul>
+<li>Are you achieving what you set out to achieve?</li>
+<li>Are there any bad consequences to the approach you are taking?—maybe your approach works for 90% of cases, but turns out spectacularly wrong in the other 10%</li>
+<li>Can you justify your decision?</li>
+<li>Is your decision in line with professional standards?</li>
+</ul>
+</section>
+<section id="difficult-decisions" class="slide level2">
+<h2>Difficult decisions</h2>
+<p>When matters arise that are not routine you need to engage <em>System 2</em>.</p>
+<ul>
+<li>A customer on high doses of morphine inquires about assisted-euthanasia.</li>
+<li>A regular customer appears to be escalating their benzodiazepine use beyond what is prescribed.</li>
+</ul>
+<p>These decisions often need some thinking and a careful consideration of the context.</p>
+</section>
+<section id="take-home-point" class="slide level2">
+<h2>Take home point</h2>
+<p class="question">
+You need a framework for thinking through ethical decisions
+</p>
+<p>This framework is important to both day-to-day decisions and more difficult decisions.</p>
+<p>Most day-to-day decisions were once difficult decisions.</p>
+<p>And once something has become a routine day-to-day decision it can be even more important to review it on occasion.</p>
+<p class="question">
+You make routine decisions routinely—if you are getting it wrong the harms may accumulate
+</p>
+</section></section>
+<section>
+<section id="a-model-for-ethical-decision-making" class="title-slide slide level1">
+<h1>A model for ethical decision making</h1>
+
+</section>
+<section id="why-do-i-need-a-model-for-ethical-decision-making" class="slide level2">
+<h2>Why do I need a model for ethical decision-making?</h2>
+<p>The downside of both the <em>principles of bioethics</em> and the codes of conduct/ethics are that they are not very explicit in regards to how to go about making ethical decisions.</p>
+<p>The model we will focus on (and use in the tutorial) outlines the process that is expected of you in your intern year.</p>
+</section>
+<section id="a-model-for-ethical-decision-making-1" class="slide level2">
+<h2>A model for ethical decision-making</h2>
+<div style="font-size: 70%">
+<ol type="1">
+<li>Identify the problem and possible consequences of the problem
+<ul>
+<li>What facts are available?</li>
+<li>What facts are still required?</li>
+<li>What is the ethical problem? (Is there a conflict between two or more guiding principles?)</li>
+<li>What harms are you concerned about? Who is affected?</li>
+</ul></li>
+<li>Identify relevant law and professional standards that apply to the case
+<ul>
+<li>What are your legal responsibilities?</li>
+<li>What are your professional responsibilities?</li>
+<li>How can you fulfil your legal and professional responsibilities in a way that brings about the best outcome in the situation?</li>
+</ul></li>
+<li>Identify the available options for resolving the problem and the reasons for or against each one</li>
+<li>Formulate a plan of action to resolve the problem
+<ul>
+<li>What do you need to put in place to improve the chances of a successful outcome?</li>
+<li>How will you mitigate any risks you have identified?</li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="putting-the-model-to-work" class="slide level2">
+<h2>Putting the model to work</h2>
+<div style="font-size: 80%">
+<p>Most of the steps in this framework are self-explanatory. You will get an opportunity to put the model to work in the tutorial.</p>
+<p>Some things to keep in mind:</p>
+<ul>
+<li class="fragment">Thinking through who might be harmed (and how they could be harmed) is often a good place to start with an ethical challenge.</li>
+<li class="fragment">It is important to think an issue through from multiple perspectives: the patient, the carer, the prescriber, the nurse and your perspective</li>
+<li class="fragment">If we have a clinical question we don’t hesitate to search the available literature for an answer—searching the literature for an ethical problem can be just as helpful</li>
+<li class="fragment">Sometimes in the face of a difficult decision it can be tempting to do nothing. Remember: doing nothing is just as much a decision any other action—can you justify your inaction?</li>
+</ul>
+</div>
+</section>
+<section id="next-step" class="slide level2">
+<h2>Next step</h2>
+<p class="question">
+<a href="https://alacaze.github.io/pres/02-ethicsmodule.html">Privacy Law and Ethics</a>
+</p>
+<p>Then the quiz! The quiz includes content from both series of slides.</p>
+<p>But there are a couple of additional questions on topics you are expected to know. (It should not be hard to find answers if you don’t know it straight away).</p>
+</section>
+<section id="references" class="slide level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-national2001Crossing">
+<p>Institute of Medicine. 2001. <em>Crossing the Quality Chasm: A New Health System for the 21st Century</em>. The National Academies Press.</p>
+</div>
+<div id="ref-kahneman2011">
+<p>Kahneman, Daniel. 2011. <em>Thinking, Fast and Slow</em>. Macmillan.</p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+   
+    
+    
+    
+    
+    
+    
+ 
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
