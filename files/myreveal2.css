@@ -134,18 +134,19 @@ p.question {
  font-size: 100%;
  /*font-weight: bold;*/
  /*font-style: normal;*/
- margin: 0;
+ margin: 0 0 0 0;
+ width: 100%;
  /*line-height: 120%;*/
- padding-top: 0.2em;
- padding-bottom: 0.2em;
+ /*padding-top: 0.2em;*/
+ /*padding-bottom: 0.2em;*/
  padding-left: 0.6em;
  padding-right: 0.2em;
- border-style: none none none solid;
- border-left-width: 0.8em;
+ border-style: none none none none;
+ border-left-width: thin;
  border-top-width: thin;
  border-right-width: thin;
  border-bottom-width: thin;
- border-color: #51247A;
+ /*border-color: #51247A;*/
  color: #51247A;
  box-shadow: 0 0 0 0;
  /*background-color: white;*/
