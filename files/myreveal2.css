@@ -208,3 +208,34 @@ p.questionalt {
   grid-template-rows: 1fr 1fr;
   grid-template-areas: ". ." ". .";
 }
+
+
+div.noted
+{
+     background-color: #f0f7fb;
+     border-left: solid 4px #3498db;
+     line-height: 100%;
+     /*mc-auto-number-format: '{b}Note: {/b}';*/
+     overflow: hidden;
+     padding: 12px;
+}
+
+div.noted2
+{
+     background-color: #e6ffe6;
+     border-left: solid 4px #00e600;
+     line-height: 100%;
+     /*mc-auto-number-format: '{b}Note: {/b}';*/
+     overflow: hidden;
+     padding: 12px;
+}
+
+div.noted3
+{
+     background-color: #FADBD8;
+     border-left: solid 4px #943126;
+     line-height: 100%;
+     /*mc-auto-number-format: '{b}Note: {/b}';*/
+     overflow: hidden;
+     padding: 12px;
+}
