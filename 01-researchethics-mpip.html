@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Human Research Ethics: Benefits and Harms</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="files/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="files/myreveal2.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="files/header-attrs-2.8/header-attrs.js"></script>
+    <link href="files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+    <script src="files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Human Research Ethics: Benefits and Harms</h1>
+    <h2 class="author"><p>Adam La Caze<br />
+School of Pharmacy<br />
+The University of Queensland</p></h2>
+    <h3 class="date">September 2021</h3>
+</section>
+
+<section>
+<section id="background" class="title-slide slide level1">
+<h1>Background</h1>
+
+</section>
+<section id="objectives" class="slide level2">
+<h2>Objectives</h2>
+<ol type="1">
+<li>Understand the guidance provided in the <em>National Statement</em> regarding assessing the risks and benefits of human research</li>
+<li>Be able to evaluate the risks and benefits of human research</li>
+<li>Demonstrate your ethical reasoning skills when evaluating human research</li>
+</ol>
+<aside class="notes">
+<p><strong>Resources</strong></p>
+<ul>
+<li>National Health and Medical Research Council, &amp; Australian Research Council. (2018). <a href="https://www.nhmrc.gov.au/about-us/publications/national-statement-ethical-conduct-human-research-2007-updated-2018">National Statement on Ethical Conduct in Human Research</a> (2007). Read <a href="https://www.nhmrc.gov.au/about-us/publications/national-statement-ethical-conduct-human-research-2007-updated-2018#toc__157">Chapter 2.1: Risk and Benefit</a></li>
+<li>The slides used for the presentation can be found <a href="https://alacaze.github.io/pres/ResearchEthics_MPIP_PRES.html">here</a></li>
+</ul>
+</aside>
+</section>
+<section id="key-concepts" class="slide level2">
+<h2>Key concepts</h2>
+<ol type="1">
+<li>Every aspect of the project influences the possible risks and benefits of the project</li>
+<li>Assessing the risk of a project includes considerations of possible harm and the probability of that harm</li>
+<li>Possible benefits of research are broadly defined</li>
+<li>Informed consent is an important component of ensuring the benefits of the research outweigh possible harms</li>
+</ol>
+</section></section>
+<section>
+<section id="defining-risk-and-benefit" class="title-slide slide level1">
+<h1>Defining Risk and Benefit</h1>
+
+</section>
+<section id="principles-of-research-ethics" class="slide level2">
+<h2>Principles of research ethics</h2>
+<ul>
+<li>Research merit and integrity</li>
+<li>Respect autonomy</li>
+<li>Promote good outcomes (beneficence)</li>
+<li>Avoid harm (non-maleficence)</li>
+<li>Be fair (justice)</li>
+</ul>
+<p class="question fragment">
+Which of these are <em>about</em> “risk” and “benefit”?
+</p>
+</section>
+<section id="section" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6"></h2>
+<p>Every aspect of the project influences risk and benefit</p>
+</section>
+<section id="defining-risk" class="slide level2">
+<h2>Defining Risk</h2>
+<!-- Risk of what -->
+<ul>
+<li class="fragment">There are many different kinds of harm (as well as less severe unwanted outcomes such as discomfort and inconvenience)</li>
+<li class="fragment">We need to think about the different kinds of harm (including <em>who</em> may be harmed) and</li>
+<li class="fragment">The probability of the harm</li>
+</ul>
+<!-- What is worse: a low risk of a very bad thing happening or a moderate risk of a moderate harm -->
+</section>
+<section id="types-of-harm" class="slide level2">
+<h2>Types of harm</h2>
+<div class="twocolumn">
+<div>
+<ul>
+<li>physical harm</li>
+<li>psychological harm</li>
+<li>social harm</li>
+<li>economic harm</li>
+<li>legal harm</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>ethical harm</li>
+<li>harm to participants</li>
+<li>harm to researchers</li>
+<li>harm to institution</li>
+<li>harm to a community</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>Most of these are listed <a href="https://www.nhmrc.gov.au/about-us/publications/national-statement-ethical-conduct-human-research-2007-updated-2018#toc__178">in the National Statement</a>.</p>
+</aside>
+</section>
+<section id="low-and-negligible-risk-research" class="slide level2">
+<h2>Low and negligible risk research</h2>
+<p><a href="https://www.nhmrc.gov.au/about-us/publications/national-statement-ethical-conduct-human-research-2007-updated-2018#toc__191">National Statement</a>:</p>
+<blockquote>
+<p>The expression ‘low risk research’ describes research in which the only foreseeable risk is one of discomfort. Research in which the risk for participants is more serious than discomfort is not low risk.</p>
+</blockquote>
+<blockquote>
+<p>The expression ‘negligible risk research’ describes research in which there is no foreseeable risk of harm or discomfort; and any foreseeable risk is no more than inconvenience.</p>
+</blockquote>
+<p class="fragment">
+Low and negligible risk research can be approved through modified processes within an institution.
+</p>
+</section>
+<section id="benefit" class="slide level2">
+<h2>Benefit</h2>
+<p><a href="https://www.nhmrc.gov.au/about-us/publications/national-statement-ethical-conduct-human-research-2007-updated-2018#toc__206">National Statement</a>:</p>
+<blockquote>
+<p>Research is ethically acceptable only when its potential benefits justify any risks involved in the research</p>
+</blockquote>
+<!-- How do you think we define benefit.
+Must be broader than individual benefit -->
+</section>
+<section id="defining-benefit" class="slide level2">
+<h2>Defining benefit</h2>
+<p><a href="https://www.nhmrc.gov.au/about-us/publications/national-statement-ethical-conduct-human-research-2007-updated-2018#toc__206">Benefits of research</a> may include</p>
+<ul>
+<li>Gains in knowledge, insight and understanding</li>
+<li>Improved social welfare and individual wellbeing</li>
+<li>Gains in skills or expertise for individual researchers, teams or institutions</li>
+</ul>
+<p>Research <em>may</em> offer direct benefits to research participants…</p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<blockquote>
+<p>For ethical review bodies, there can be a profound tension between the obligation on the one hand to give maximum scope to participants’ freedom to accept risk, and on the other to see that research is conducted in a way that is beneficent and minimises harm.</p>
+</blockquote>
+<p><a href="https://www.nhmrc.gov.au/about-us/publications/national-statement-ethical-conduct-human-research-2007-updated-2018#toc__206">National Statement</a></p>
+</section>
+<section id="section-2" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6"></h2>
+<p>Informed consent is a key mechanism for ensuring that the potential benefits of research justify the risks involved.</p>
+</section></section>
+<section>
+<section id="evaluating-risk-and-benefit" class="title-slide slide level1">
+<h1>Evaluating risk and benefit</h1>
+
+</section>
+<section id="extracorporeal-membrane-oxygenation-ecmo" class="slide level2">
+<h2>Extracorporeal Membrane Oxygenation (ECMO)</h2>
+<p><img data-src="files/figtab/ECMO.png" style="width:60.0%" alt="Bartlett et al. 1995" /></p>
+<aside class="notes">
+<p><a href="http://en.wikipedia.org/wiki/Ecmo">ECMO</a> is a technique used in ICU to aid the heart and lungs during severe distress. Clinical studies testing the efficacy of ECMO for persistent pulmonary hypertension in newborns raise a host of difficult ethical issues. We’ll discuss one or two.</p>
+</aside>
+</section>
+<section id="early-ecmo-studies" class="slide level2">
+<h2>Early ECMO studies</h2>
+<div style="font-size:80%">
+<ul>
+<li><p><span class="citation" data-cites="Bartlett:1982fk">Bartlett et al. (1982)</span> reported a case series that included 45 newborns judged to have less than 10% chance of survival; these infants we treated with ECMO and 25/45 survived</p></li>
+<li><p><span class="citation" data-cites="Bartlett:1985p3473">Bartlett et al. (1985)</span> was designed to prove ECMO was effective in these patients.</p>
+<ul>
+<li><p>The study enrolled infants judged to have <span class="math inline">\(\ge\)</span> 80% mortality rate. Only infants receiving ECMO provided informed consent.</p></li>
+<li><p>Randomised-play-the-winner design; more infants were to be recruited to whichever treatment arm was the more successful. Planned to stop after 10 survivors or 10 deaths.</p></li>
+<li><p>Overall 1 control patient (who died) and 11 ECMO patients (who survived). A further 8 patients were given ECMO and survived.</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p><img data-src="files/figtab/Bartlett.png" alt="Bartlett et al. 1995" /></p>
+</section>
+<section id="section-4" class="slide level2" data-background="#4085C6">
+<h2 data-background="#4085C6"></h2>
+<p>How would you evaluate the risks and benefits associated with this study?</p>
+</section>
+<section id="some-considerations-that-arise-from-bartlett1985p3473" class="slide level2">
+<h2>Some considerations that arise from <span class="citation" data-cites="Bartlett:1985p3473">Bartlett et al. (1985)</span></h2>
+<ul>
+<li><p>The importance of research on vulnerable populations</p></li>
+<li><p>The importance of informed consent. Do you think it was appropriate that only parents of infants that received ECMO gave informed consent to participate?</p></li>
+<li><p>What standard should be used by clinicians to decide whether or not they should enrol their patient in research?</p></li>
+</ul>
+</section>
+<section id="developing-new-oncology-treatments" class="slide level2">
+<h2>Developing new oncology treatments</h2>
+<ul>
+<li><p>First use in humans is typically on cancer patients with poor prognosis, e.g. expected survival without treatment may be 3 months and best-case survival on treatment up to 5 months</p></li>
+<li><p>The new treatments carry significant risks, not all of them known and the studies may include a range of additional invasive procedures</p></li>
+<li><p>In a randomized study whether you receive treatment or control is decided by chance.</p></li>
+</ul>
+</section>
+<section id="phase-i-trial-of-imatinib-in-chronic-myeloid-leukaemia-druker2001tx" class="slide level2">
+<h2>Phase I trial of imatinib in chronic myeloid leukaemia <span class="citation" data-cites="Druker:2001tx">(Druker et al. 2001)</span></h2>
+<ul>
+<li>Dose escalation trial in chronic phase CML patients in whom interferon-<span class="math inline">\(\alpha\)</span> treatment had failed. Prognosis is poor, life expectancy measured in months.</li>
+</ul>
+<p class="fragment">
+How would you assess the risks/benefits of participating in a study in the last months of your life in which the risks are high, the effort to participate is great and the likelihood of benefit is small?
+</p>
+<p class="fragment">
+How should an ethics committee assess these risks?
+</p>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<ul>
+<li><p>83 patients successively assigned to 1 of 14 dose cohorts, ranging from 25mg–1000mg per day</p></li>
+<li><p>53 of the 54 patients on <span class="math inline">\(\ge\)</span> 300mg/day had a complete haematological response (reduced WBC and platelet count maintained for four weeks). 51 of these patients maintained this response up to 265 days.</p></li>
+</ul>
+<!-- # Cases -->
+<!-- ## Phase I, first-in-humans trial
+
+*Anothernib* is a new biologic drug is being trialled in chronic myeloid leukaemia.
+
+The objectives of the trial are to determine the maximum tolerated dose and, hopefully, gain some data on the minimal effective dose.
+
+The trial will enrol patients that have failed all other treatments and have poor prognosis (life expectancy measured in months).
+
+
+<p class="question fragment">Discuss the risks and benefits of this study</p>  -->
+<!-- ## Key considerations {data-background=#00A2C7}
+
+
+* Possibility of patient benefit is very small
+* How do we ensure that patients make an informed decision to participate? 
+* Participants need a clear understanding of:
+    - Likely benefit
+    - Alternatives
+    - The burdens of participation -->
+</section>
+<section id="australasian-covid-19-trial-ascot" class="slide level2">
+<h2>Australasian COVID-19 Trial (ASCOT)</h2>
+<p>The <a href="https://www.ascot-trial.edu.au/">ASCOT trial</a> is an adaptive clinical trial initiated early in the pandemic to assess the effectiveness of treatments for COVID-19</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+PICO
+</th>
+<th style="text-align:left;">
+ASCOT
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 10em; ">
+Participants
+</td>
+<td style="text-align:left;width: 20em; ">
+Adult patients with confirmed SARS-CoV-2 infection who are not receiving acute intensive respiratory support.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+Intervention
+</td>
+<td style="text-align:left;width: 20em; ">
+Antiretroviral (Lopinavir/ritonavir), or<br />
+Antiretroviral + Hydroxychloroquine, or<br />
+Convalescent plasma
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+Comparator
+</td>
+<td style="text-align:left;width: 20em; ">
+Standard of care
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 10em; ">
+Outcome
+</td>
+<td style="text-align:left;width: 20em; ">
+Proportion of patients alive and not having required new intensive respiratory support or vasopressors in the 28 days after randomization
+</td>
+</tr>
+</tbody>
+</table>
+<p class="question fragment">
+Discuss the risks and benefits of this study
+</p>
+</section>
+<section id="genetic-testing" class="slide level2">
+<h2>Genetic testing</h2>
+<p>A study seeks to assess a new drug for the treatment of skin cancer.</p>
+<p>To participate in the trial, patients need to consent to genetic testing, including:</p>
+<ul>
+<li class="fragment">Testing for somatic mutations related to the tumour</li>
+<li class="fragment">Pharmacogenomic mutations related to the pharmacokinetics of the investigational drug</li>
+<li class="fragment">Genetic screening (including whole genome sequencing) for genes related to skin cancer</li>
+</ul>
+<p class="question fragment">
+Discuss the risks and benefits of this study
+</p>
+<!-- ## Questions
+
+* Should genetic testing be the price of entry into a study?
+* What details regarding genetic testing need to be given to a participant so that they can make an informed decision?
+* In what situations should investigators communicate the results of genetic testing to participants? -->
+<aside class="notes">
+<p>This is a changing area.</p>
+<p>See <a href="https://www.nhmrc.gov.au/about-us/publications/national-statement-ethical-conduct-human-research-2007-updated-2018#toc__826">National Statement</a> for discussion.</p>
+<p><span class="citation" data-cites="Fabsitz2011">Fabsitz et al. (2011)</span> also provides discussion.</p>
+</aside>
+</section>
+<section id="databank" class="slide level2">
+<h2>Databank</h2>
+<p>A pharmaceutical company that makes a new drug used for a rare genetic spinal disease seeks to set up a databank.</p>
+<p>The databank will recruit all patients taking the drug and collect information on their response, other drugs, and related outcomes.</p>
+<p>The company also seeks to collect any left over blood or tissue for genetic tests.</p>
+<p>All data will be retained by the company and will not be accessible to third parties.</p>
+<p class="question fragment">
+Discuss the risks and benefits of this study
+</p>
+<!-- 
+## Considerations
+
+<p class="question">This is a good example in which it is important to achieve two things: transparency and security (NS 3.1.55--62)</p>
+
+<p class = "fragment">Need to ensure that individual data cannot be re-identified</p>
+
+<p class = "fragment">Need to ensure that the data provided by participants is available for use by the scientific community (for the benefit of patients)</p> 
+
+<div class="notes">
+There is a lot of information available about Open Science and the risks of identifying participants from data sharing.
+
+Two examples include: [BMJ Open Data](https://www.bmj.com/open-data) and the [Office of the Australian Information Commissioner](https://www.oaic.gov.au/privacy/privacy-decisions/investigation-reports/mbspbs-data-publication/) on the re-identification of PBS data shared publicly.
+</div> -->
+</section>
+<section id="references" class="slide level2">
+<h2>References</h2>
+<div id="refs" class="references hanging-indent" style="font-size:70%" role="doc-bibliography">
+<div id="ref-Bartlett:1982fk">
+<p>Bartlett, R H, A F Andrews, J M Toomasian, N J Haiduc, and A B Gazzaniga. 1982. “Extracorporeal membrane oxygenation for newborn respiratory failure: forty-five cases.” <em>Surgery</em> 92 (2): 425–33.</p>
+</div>
+<div id="ref-Bartlett:1985p3473">
+<p>Bartlett, R H, D W Roloff, R G Cornell, A F Andrews, P W Dillon, J B Zwischenberger, J H Ware, and M F Epstein. 1985. “Extracorporeal circulation in neonatal respiratory failure: a prospective randomized study.” <em>Pediatrics</em> 76 (4): 479–87.</p>
+</div>
+<div id="ref-Druker:2001tx">
+<p>Druker, B J, M Talpaz, D J Resta, and Et Al. 2001. “Efficacy and safety of a specific inhibitor of the BCR-ABL tyrosine kinase in chronic myeloid leukemia.” <em>The New England Journal of Medicine</em> 344 (14): 1031–7.</p>
+</div>
+<div id="ref-Fabsitz2011">
+<p>Fabsitz, Richard R, Amy Mcguire, Richard R Sharp, Mona Puggal, Laura M Beskow, Leslie G Biesecker, Ebony Bookman, et al. 2011. “Ethical and practical guidlines for reporting genetic research results to study participants: updated guidelines from an NHLBI working group.” <em>Circulation: Cardiovascular Genetics</em> 3 (6): 574–80. <a href="https://doi.org/10.1161/CIRCGENETICS.110.958827.Ethical">https://doi.org/10.1161/CIRCGENETICS.110.958827.Ethical</a>.</p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script src="files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+        menu: {
+   
+    
+    
+    
+    
+    
+    
+ 
+          custom: false,
+          themes: false,
+          transitions: false
+        },
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'files/reveal.js-3.3.0.1/plugin/menu/menu.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
