@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #51247A;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+/*.accord1 {
+  background-color: #00A2C7 ;
+}*/
+
+.active, .accordion:hover {
+  background-color: #00A2C7;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
+
+<button class="accordion">What is the study about? (What is the study PICO?)</button>
+<div class="panel">
+<p>Does the participant sample make sense?</p>
+<p>Does the intervention and control make sense?</p>
+<p>Confirm the statistical details</p>
+</div>
+
+<button class="accordion">Can we trust the results of the study? (Internal validity)</button>
+<div class="panel">
+<p>Are the groups comparable?</p>
+<ul>
+<li>Was the allocation of participants <strong>randomized</strong>?</li>
+<li>Were the groups similar at the start of the trial?</li>
+<li>Aside from allocated treatment, were groups treated equally?</li>
+<li>Were all participants who entered the trial accounted for?—and were they analysed in the groups to which they were randomized?</li>
+</ul>
+<p>What did the study measure? Is it reliable?</p>
+<ul>
+<li>Is the primary endpoint a clinical outcome?</li>
+<li>Were the measures <strong>objective</strong>?</li>
+<li>Were participants, investigators and trial staff <strong>masked</strong> from treatment allocation</li>
+</ul>
+
+</div>
+
+<button class="accordion">What were the results of the study?</button>
+<div class="panel">
+  <p>How large was the treatment effect?</p>
+<ul>
+<li>How precise was the estimate?</li>
+<li>If appropriate, calculate relative risk, absolute risk difference and number needed to treat/number needed to harm</li>
+</ul>
+
+</div>
+
+<button class="accordion">How do the results of the study apply to practice? (External validity)</button>
+<div class="panel">
+<p>Are the findings relevant to an identifiable patient group?</p>
+<p>Is the trial setting relevant to the clinical setting?</p>
+<p>Did the trial provide treatments in a way that is relevant to how the treatment(s) will be employed in the clinic?</p>
+<p>Are the efficacy and safety outcomes assessed in the trial relevant to patients?</p>
+
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
