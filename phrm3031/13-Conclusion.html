@@ -1958,9 +1958,14 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <section>
     <h1 class="title">Conclusion and review</h1>
     <h2 class="author">Adam La Caze</h2>
-    <h3 class="date">Semester 1, 2022</h3>
+    <h3 class="date">Semester 1, 2023</h3>
 </section>
 
+<section class="slide level2">
+
+<!-- 
+https://alacaze.github.io/pres/phrm3031/13-Conclusion.html -->
+</section>
 <section id="lecture-objectives" class="slide level2">
 <h2>Lecture Objectives</h2>
 <ol type="1">
@@ -1974,17 +1979,24 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <h2 data-background="#4085C6">PHRM3031 Objectives</h2>
 <p>After completing this course you should be able to:</p>
 <ol type="1">
-<li>Identify the components forming an answerable research question and describe how to search the literature</li>
-<li>Describe various study designs and be able to discuss the advantages and disadvantages of each in specific circumstances</li>
-<li>Critically appraise original clinical research articles in the context of evidence based practice (EBP)</li>
+<li>Identify the components forming an answerable research question and
+describe how to search the literature</li>
+<li>Describe various study designs and be able to discuss the advantages
+and disadvantages of each in specific circumstances</li>
+<li>Critically appraise original clinical research articles in the
+context of evidence based practice (EBP)</li>
 </ol>
 </section>
 <section id="section" class="slide level2" data-background="#4085C6">
 <h2 data-background="#4085C6"></h2>
 <ol start="4" type="1">
-<li>Calculate clinically relevant measures of effect to assist in the interpretation and application of evidence</li>
-<li>Demonstrate an ability to apply the principles of clinical epidemiology relevant to pharmacy practice and in a public health context</li>
-<li>Apply and communicate evidence of treatment effects focused on an individual patient</li>
+<li>Calculate clinically relevant measures of effect to assist in the
+interpretation and application of evidence</li>
+<li>Demonstrate an ability to apply the principles of clinical
+epidemiology relevant to pharmacy practice and in a public health
+context</li>
+<li>Apply and communicate evidence of treatment effects focused on an
+individual patient</li>
 </ol>
 </section>
 <section>
@@ -1995,8 +2007,9 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <section id="written-exam" class="slide level2">
 <h2>Written Exam</h2>
 <ul>
-<li><p>When: the written exam is held in the exam period at the end of the semester</p></li>
-<li><p>Duration: 1 hour (10 minutes reading time)</p></li>
+<li><p>When: the written exam is held in the exam period at the end of
+the semester</p></li>
+<li><p>Duration: 1 hour (10 minutes planning time)</p></li>
 <li><p>Range of different question types</p></li>
 <li><p>Content: is taken from lectures and tutorials</p></li>
 </ul>
@@ -2004,8 +2017,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <section class="slide level2">
 
 <ul>
-<li><p>The exam is non-invigilated and online</p></li>
-<li><p>Platform is Inspera—see <a href="https://web.library.uq.edu.au/library-services/it/assessments-inspera">Library</a> for information</p></li>
+<li><p>The exam is on-campus and invigilated</p></li>
+<li><p>Platform is Inspera—see <a href="https://web.library.uq.edu.au/library-services/it/assessments-inspera">Library</a>
+for information</p></li>
+<li><p>You need a laptop and the appropriate version of the <a href="https://web.library.uq.edu.au/library-services/it/learnuq-blackboard-help/inspera-assessment/using-safe-exam-browser-campus-exams-inspera">Safe
+Exam Browser</a> to complete the exam</p></li>
+<li><p>You can bring an approved calculator</p></li>
 </ul>
 </section>
 <section id="grades" class="slide level2">
@@ -2026,7 +2043,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </tr>
 <tr class="even">
 <td style="text-align: left;">Critical appraisal assignment</td>
-<td style="text-align: left;">29 April</td>
+<td style="text-align: left;">28 April</td>
 <td style="text-align: center;">40%</td>
 </tr>
 <tr class="odd">
@@ -2041,9 +2058,11 @@ document.addEventListener('DOMContentLoaded', function(e) {
 <section id="course-evaluations" class="slide level2">
 <h2>Course evaluations</h2>
 <ul>
-<li>Please complete the course evaluation (SECaT). Your feedback helps to improve the course and the teaching your receive</li>
+<li>Please complete the course evaluation (SECaT). Your feedback helps
+to improve the course and the teaching your receive</li>
 <li>You can find further information <a href="https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/evaluate-my-course-and-teaching">here</a></li>
-<li>Visit <a href="https://eval.uq.edu.au/">eval.uq.edu.au</a> to complete the evaluation for PHRM3031</li>
+<li>Visit <a href="https://eval.uq.edu.au/">eval.uq.edu.au</a> to
+complete the evaluation for PHRM3031</li>
 </ul>
 </section>
 <section id="sample-exam-discussion" class="slide level2">
@@ -6815,16 +6834,41 @@ document.addEventListener('DOMContentLoaded', function(e) {
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
         // Display the page number of the current slide
         slideNumber: true,
         // Push each slide change to the browser history
         history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
         // Vertical centering of slides
         center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
         // Transition style
         transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
         // Transition style for full page slide backgrounds
         backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
 
 
 
@@ -6854,6 +6898,14 @@ document.addEventListener('DOMContentLoaded', function(e) {
   })();
 </script>
 
+<script>
+     Reveal.configure({
+      keyboard: {
+     39: 'next', // Right Arrow
+     37: 'prev'  // Left Arrow
+  }
+});
+</script>
 
   </body>
 </html>
