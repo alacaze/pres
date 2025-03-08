@@ -2163,10 +2163,17 @@ you are trying to detect (perhaps the difference between two means). The
 smaller the estimated effect size, the lower the power</p>
 <p>This might be determined by existing evidence, or it might be the
 “minimally clinically important difference”.</p></li>
-<li><p><strong>Variability in the sample</strong>: the more variability
-in the sample, the lower the power of the test</p></li>
-<li><p><strong>Predetermined <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span></strong>: standard values are <span class="math inline">\(\alpha = 0.05\)</span>, <span class="math inline">\(\beta = 0.2\)</span>, but if you change these, you
-will change the power of the test</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><strong>Variability in the sample</strong>: the more variability in
+the sample, the lower the power of the test</li>
+<li><strong>Predetermined <span class="math inline">\(\alpha\)</span>,
+<span class="math inline">\(\beta\)</span></strong>: standard values are
+<span class="math inline">\(\alpha = 0.05\)</span>, <span class="math inline">\(\beta = 0.2\)</span>, but if you change these, you
+will change the power of the test</li>
 </ul>
 </section>
 <section id="study-planning" class="slide level2">
@@ -2216,8 +2223,8 @@ size?</p>
 </tbody>
 </table>
 </section>
-<section id="caclulating-sample-size-code" class="slide level2">
-<h2>Caclulating sample size (code)</h2>
+<section id="calculating-sample-size-code" class="slide level2">
+<h2>Calculating sample size (code)</h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this is package that has the power calculations </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># we are using; you will need to install it</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># e.g. install.packages(&quot;pwr&quot;)</span></span>
@@ -2230,8 +2237,8 @@ size?</p>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> d, <span class="at">power =</span> <span class="fl">0.8</span>, <span class="at">type =</span> <span class="st">&quot;two.sample&quot;</span>,</span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span></code></pre></div>
 </section>
-<section id="caclulating-sample-size-output" class="slide level2">
-<h2>Caclulating sample size (output)</h2>
+<section id="calculating-sample-size-output" class="slide level2">
+<h2>Calculating sample size (output)</h2>
 <pre><code>## 
 ##      Two-sample t test power calculation 
 ## 
