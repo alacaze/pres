@@ -1912,6 +1912,230 @@ document.addEventListener('DOMContentLoaded', function(e) {
   }
 });
 </script>
+    <script>$(document).ready(function(){
+    if (typeof $('[data-toggle="tooltip"]').tooltip === 'function') {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    if ($('[data-toggle="popover"]').popover === 'function') {
+        $('[data-toggle="popover"]').popover();
+    }
+});
+</script>
+    <style type="text/css">
+.lightable-minimal {
+border-collapse: separate;
+border-spacing: 16px 1px;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-minimal td {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal th {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal thead tr:last-child th {
+border-bottom: 2px solid #00000050;
+empty-cells: hide;
+}
+.lightable-minimal tbody tr:first-child td {
+padding-top: 0.5em;
+}
+.lightable-minimal.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-minimal.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic {
+border-top: 0.16em solid #111111;
+border-bottom: 0.16em solid #111111;
+width: 100%;
+margin-bottom: 10px;
+margin: 10px 5px;
+}
+.lightable-classic tfoot tr td {
+border: 0;
+}
+.lightable-classic tfoot tr:first-child td {
+border-top: 0.14em solid #111111;
+}
+.lightable-classic caption {
+color: #222222;
+}
+.lightable-classic td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic thead tr:last-child th {
+border-bottom: 0.10em solid #111111;
+}
+.lightable-classic.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic-2 {
+border-top: 3px double #111111;
+border-bottom: 3px double #111111;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-classic-2 tfoot tr td {
+border: 0;
+}
+.lightable-classic-2 tfoot tr:first-child td {
+border-top: 3px double #111111;
+}
+.lightable-classic-2 caption {
+color: #222222;
+}
+.lightable-classic-2 td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic-2 th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic-2 tbody tr:last-child td {
+border-bottom: 3px double #111111;
+}
+.lightable-classic-2 thead tr:last-child th {
+border-bottom: 1px solid #111111;
+}
+.lightable-classic-2.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic-2.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #EEE;
+border-collapse: collapse;
+margin-bottom: 10px;
+}
+.lightable-material tfoot tr td {
+border: 0;
+}
+.lightable-material tfoot tr:first-child td {
+border-top: 1px solid #EEE;
+}
+.lightable-material th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+}
+.lightable-material td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+border-top: 1px solid #eeeeee;
+}
+.lightable-material.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #ddd;
+}
+.lightable-material-dark {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #FFFFFF12;
+border-collapse: collapse;
+margin-bottom: 10px;
+background-color: #363640;
+}
+.lightable-material-dark tfoot tr td {
+border: 0;
+}
+.lightable-material-dark tfoot tr:first-child td {
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF60;
+}
+.lightable-material-dark td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF;
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark.lightable-hover tbody tr:hover {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody tr:nth-child(even) {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material-dark.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #FFFFFF12;
+}
+.lightable-paper {
+width: 100%;
+margin-bottom: 10px;
+color: #444;
+}
+.lightable-paper tfoot tr td {
+border: 0;
+}
+.lightable-paper tfoot tr:first-child td {
+border-top: 1px solid #00000020;
+}
+.lightable-paper thead tr:last-child th {
+color: #666;
+vertical-align: bottom;
+border-bottom: 1px solid #00000020;
+line-height: 1.15em;
+padding: 10px 5px;
+}
+.lightable-paper td {
+vertical-align: middle;
+border-bottom: 1px solid #00000010;
+line-height: 1.15em;
+padding: 7px 5px;
+}
+.lightable-paper.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-paper.lightable-striped tbody tr:nth-child(even) {
+background-color: #00000008;
+}
+.lightable-paper.lightable-striped tbody td {
+border: 0;
+}
+</style>
 </head>
 <body>
   <div class="reveal">
@@ -1933,21 +2157,6 @@ of each phase, the types of participants involved, and kinds of analysis
 used.</p></li>
 <li><p>Appreciate the challenges of clinical drug development.</p></li>
 <li><p>Understand the role of informative drug development.</p></li>
-</ul>
-</section>
-<section id="resources" class="slide level2 notes">
-<h2>Resources</h2>
-<ul>
-<li><p><span class="citation" data-cites="Turner:2010dja">Turner
-(2010)</span>: <em>New Drug Development</em> is an online textbook on
-drug development that may be of use. Chapter 5 gives a good overview of
-the terminology and purpose of the key stages of clinical drug
-development.</p></li>
-<li><p><span class="citation" data-cites="Sheiner:1997p1429">Sheiner
-(1997)</span> is a classic article that provides a good way to
-understand clinical drug development. It also introduces informative
-drug development</p></li>
-<li><p>The slides for the presentation can be found <a href="https://alacaze.github.io/pres/mpip/ClinDrugDev_PRES.html">here</a></p></li>
 </ul>
 </section>
 <section>
@@ -2447,40 +2656,72 @@ gaining information that with aid design of Phase III studies:
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
+<!-- 
+
+                         **Traditional Drug Develop.**                                       **Informative Drug Develop.**
+  ---------------------- ------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------
+  Statistical approach   Frequentist                                                         Bayesian/Frequentist
+  Use of data            Data from trials considered independently; trials run in parallel   Sequential trials; prior evidence explicitly incorporated
+  Design                 Focus on randomized controlled trials                               Greater flexibility
+  Analytical approach    Hypothesis testing                                                  Use PKPD information to model what we know about the drug; use these models to measure and predict outcomes and to optimise design -->
 <table>
 <thead>
-<tr class="header">
-<th></th>
-<th style="text-align: left;"><strong>Traditional Drug
-Develop.</strong></th>
-<th style="text-align: left;"><strong>Informative Drug
-Develop.</strong></th>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+Traditional drug development
+</th>
+<th style="text-align:left;">
+Informative drug development
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>Statistical approach</td>
-<td style="text-align: left;">Frequentist</td>
-<td style="text-align: left;">Bayesian/Frequentist</td>
+<tr>
+<td style="text-align:left;width: 5em; ">
+Statistical approach
+</td>
+<td style="text-align:left;width: 15em; ">
+Frequentist
+</td>
+<td style="text-align:left;width: 15em; ">
+Bayesian/Frequentist
+</td>
 </tr>
-<tr class="even">
-<td>Use of data</td>
-<td style="text-align: left;">Data from trials considered independently;
-trials run in parallel</td>
-<td style="text-align: left;">Sequential trials; prior evidence
-explicitly incorporated</td>
+<tr>
+<td style="text-align:left;width: 5em; ">
+Use of data
+</td>
+<td style="text-align:left;width: 15em; ">
+Data from trials considered independently; trials run in parallel
+</td>
+<td style="text-align:left;width: 15em; ">
+Sequential trials; prior evidence explicitly incorporated
+</td>
 </tr>
-<tr class="odd">
-<td>Design</td>
-<td style="text-align: left;">Focus on randomized controlled trials</td>
-<td style="text-align: left;">Greater flexibility</td>
+<tr>
+<td style="text-align:left;width: 5em; ">
+Design
+</td>
+<td style="text-align:left;width: 15em; ">
+Focus on randomized trials
+</td>
+<td style="text-align:left;width: 15em; ">
+Greater flexibility
+</td>
 </tr>
-<tr class="even">
-<td>Analytical approach</td>
-<td style="text-align: left;">Hypothesis testing</td>
-<td style="text-align: left;">Use PKPD information to model what we know
-about the drug; use these models to measure and predict outcomes and to
-optimise design</td>
+<tr>
+<td style="text-align:left;width: 5em; ">
+Analytical approach
+</td>
+<td style="text-align:left;width: 15em; ">
+Hypothesis testing
+</td>
+<td style="text-align:left;width: 15em; ">
+Use PKPD inforamtion to model what we know about the drug; use these
+models to measure and predict outcomes and to opitimise design
+</td>
 </tr>
 </tbody>
 </table>
@@ -2496,10 +2737,14 @@ Meibohm (2013)</span> discusses the application of pharmacometrics to
 the clinical development of anti-infectives</li>
 <li><span class="citation" data-cites="Orloff:2009p3490">Orloff et al.
 (2009)</span> discusses adaptive trial designs</li>
+<li><span class="citation" data-cites="Ferro2020">Ferro et al.
+(2020)</span> discusses regulation and evidence regarding diabetes
+drugs</li>
 </ul>
 </section>
-<section id="references" class="slide level2 unnumbered" style="font-size:40%">
-<h2 class="unnumbered" style="font-size:40%">References</h2>
+<section id="references" class="slide level2">
+<h2>References</h2>
+<div style="font-size:40%">
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Bresalier:2005pi" class="csl-entry" role="listitem">
 Bresalier, Robert S, Robert S Sandler, Hui Quan, James A Bolognese,
@@ -2520,6 +2765,12 @@ Practice</span>.”</span> <em>Clinical Pharmacology
 Druker, B J, M Talpaz, D J Resta, and Et Al. 2001. <span>“<span class="nocase">Efficacy and safety of a specific inhibitor of the
 BCR-ABL tyrosine kinase in chronic myeloid leukemia</span>.”</span>
 <em>The New England Journal of Medicine</em> 344 (14): 1031–37.
+</div>
+<div id="ref-Ferro2020" class="csl-entry" role="listitem">
+Ferro, Enrico G., Erin D. Michos, Deepak L. Bhatt, A. Michael Lincoff,
+and Mohamed B. Elshazly. 2020. <span>“New <span>Decade</span>, <span>New
+FDA Guidance</span> for <span>Diabetes Drug Development</span>.”</span>
+<em>JACC</em> 76 (21): 2522–26. <a href="https://doi.org/10.1016/j.jacc.2020.09.590">https://doi.org/10.1016/j.jacc.2020.09.590</a>.
 </div>
 <div id="ref-Marshall2019" class="csl-entry" role="listitem">
 Marshall, Scott, Rajanikanth Madabushi, Efthymios Manolis, Kevin Krudys,
@@ -2563,14 +2814,11 @@ Trivedi, Ashit, Richard E. Lee, and Bernd Meibohm. 2013. <span>“<span class="n
 development and pharmacotherapy of anti-infectives</span>.”</span>
 <em>Expert Review of Clinical Pharmacology</em> 6 (2): 159–70. <a href="https://doi.org/10.1586/ecp.13.6">https://doi.org/10.1586/ecp.13.6</a>.
 </div>
-<div id="ref-Turner:2010dja" class="csl-entry" role="listitem">
-Turner, J Rick. 2010. <em><span>New Drug Development</span></em>. New
-York, NY: Springer New York. <a href="https://doi.org/10.1007/978-1-4419-6418-2_1">https://doi.org/10.1007/978-1-4419-6418-2_1</a>.
-</div>
 <div id="ref-FDA2018" class="csl-entry" role="listitem">
 US Food and Drug Administration. 2018. <span>“<span class="nocase">FDA
 Background Document Endocrinologic and Metabolic Drugs Advisory
 Committee Meeting</span>.”</span> <a href="https://www.fda.gov/downloads/AdvisoryCommittees/CommitteesMeetingMaterials/Drugs/EndocrinologicandMetabolicDrugsAdvisoryCommittee/UCM623913.pdf">https://www.fda.gov/downloads/AdvisoryCommittees/CommitteesMeetingMaterials/Drugs/EndocrinologicandMetabolicDrugsAdvisoryCommittee/UCM623913.pdf</a>.
+</div>
 </div>
 </div>
 </section></section>
